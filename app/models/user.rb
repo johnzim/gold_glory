@@ -16,10 +16,12 @@
 
 class User < ActiveRecord::Base
 
-  attr_accessor :password, :salt
+  attr_accessor :password
   attr_accessible :name, :email, :country, :password, :password_confirmation
 
-  validates :name, :presence => true
+  validates :name, :presence => true,                     
+  :length => { :maximum => 50 }
+
 
   validates :email, :presence => true, :length => { :within => 6..40 },
   :uniqueness => { :case_sensitive => false }
@@ -40,6 +42,11 @@ class User < ActiveRecord::Base
   def self.authenticate(email, submitted_password)
     user = find_by_email(email)
     user && user.has_password?(submitted_password) ? user : nil
+  end
+
+  def self.authenticate_with_salt(id, cookie_salt)
+    user = find_by_id(id)
+    (user && user.salt == cookie_salt) ? user : nil
   end
 
   private
