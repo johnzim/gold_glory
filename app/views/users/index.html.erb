@@ -1,14 +1,8 @@
-<h1>All the Users signed up</h1>
+<h1>All users</h1>
 
 <%= will_paginate %>
-
-<%= @users.each do |user| %>
-
-<ul>
-  <li><% user.name %></li>
-  <li><% user.email %></li>
-  <li><% user.country %></li>
+<ul class="users">
+  <%= render @users %>
 </ul>
 
-<% end %>
 <%= will_paginate %>
