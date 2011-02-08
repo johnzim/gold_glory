@@ -30,7 +30,7 @@ class User < ActiveRecord::Base
                        :confirmation => true,
                        :length       => { :within => 6..40 }  
 
-
+  has_many :spamposts
   before_save :encrypt_password
 
 

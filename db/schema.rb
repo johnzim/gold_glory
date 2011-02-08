@@ -10,7 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110206212724) do
+ActiveRecord::Schema.define(:version => 20110208195118) do
+
+  create_table "spamboxes", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "spamposts", :force => true do |t|
+    t.string   "content"
+    t.string   "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "spamposts", ["user_id"], :name => "index_spamposts_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"

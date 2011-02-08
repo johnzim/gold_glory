@@ -1,0 +1,2 @@
+module SpampostsHelper
+end

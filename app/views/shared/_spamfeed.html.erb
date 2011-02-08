@@ -1,0 +1,6 @@
+<div id="spamfeed">
+<% unless @spamfeed_items.empty? %>
+<%= render :partial => 'shared/spamfeed_item', :collection =>
+@spamfeed_items %>
+<% end %>
+</div>

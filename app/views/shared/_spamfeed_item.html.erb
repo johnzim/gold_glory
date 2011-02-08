@@ -1,0 +1,9 @@
+<div id="spamfeed_item">
+  <ul>
+    <li><%= spamfeed_item.user.name =%></li>
+    <li><%= spamfeed_item.content =%></li>
+    <li>Posted <%= time_ago_in_words(spamfeed_item.created_at) %>
+    ago.</li>
+  </ul>
+
+</div>
