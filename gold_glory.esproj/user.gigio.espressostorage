@@ -35,6 +35,22 @@
 			<dict>
 				<key>StateType</key>
 				<string>PreviewTab</string>
+				<key>Title</key>
+				<string>Gold and Glory | Home</string>
+				<key>URL</key>
+				<string>http://localhost:3000/</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/gigio/rails_projects/gold_glory/public/stylesheets/custom.css</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
+			</dict>
+			<dict>
+				<key>DocumentURL</key>
+				<string>file://localhost/Users/gigio/rails_projects/gold_glory/app/views/pages/home.html.erb</string>
+				<key>StateType</key>
+				<string>DefaultTab</string>
 			</dict>
 		</array>
 	</dict>

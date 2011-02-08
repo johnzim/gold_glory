@@ -1,9 +1,11 @@
+<div id="spam_field">
 <%= form_for @spampost do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
-  <div class="field">
+  <div id="field">
     <%= f.text_area :content %>
   </div>
- <div class="actions">
+ <div id="submit_button">
     <%= f.submit "Submit" %>
   </div>
 <% end %>
+</div>
