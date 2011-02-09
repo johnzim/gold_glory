@@ -1,5 +1,10 @@
+body{
+	background-color: #7ad6e4;	
+
+}
+
 #page_container {
-	background-color: #dddddd;
+/*	background-color: #dddddd;*/
 	width: 900px;
 	margin-left: auto;
 	margin-right: auto;
@@ -12,12 +17,34 @@
 	float: left;
 }
 
+#next_event_container {
+	position:  relative;
+	left:  80px;
+	top: 60px;
+	background-color: red;
+	float: left;
+	height: 100px;
+	width:  400px;
+	
+}
+
+#tab_bar_container {
+	background-color: #efc100;
+	width: 500px;
+	position: relative;
+	left: 20px;
+	top:  20px;
+	height: 40px;
+}
+
+
 #content_container {
 	background-color: #f0e7c4;
-	width: 600px;
+	width: 630px;
 	height:  900px;
 	margin-right: auto;
 	position: relative;
+	top: 15px;
 	left: 20px;
 	float: left;
 }
@@ -34,12 +61,13 @@
 	margin-right: auto;
 	float: right;
 	position: relative;
-	padding: 10px
+	padding: 10px;
+	top: 0px;
 }
 
 #results_container{
 	background-color: #f0e7c4;
-	width: 300px;
+	width: 280px;
 	height: 200px;
 	margin-left: auto;
 	position: relative;
