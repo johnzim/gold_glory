@@ -54,6 +54,11 @@ body{
 	
 }
 
+#content_container p {
+	padding: 10px;
+	
+}
+
 #spam_container {
 	background-color: #f0e7c4;
 	width: 200px;
