@@ -1,7 +1,7 @@
 <div id="spamfeed_item">
   <ul>
    <li><%= spamfeed_item.content =%></li>
-    <li><span id="posted_at">Posted <%= time_ago_in_words(spamfeed_item.created_at) %>
+    <li><span id="posted_at"><%= time_ago_in_words(spamfeed_item.created_at) %>
     ago by <%= spamfeed_item.user.name.capitalize =%></span></li>
   </ul>
 

@@ -4,7 +4,7 @@ class PagesController < ApplicationController
     @user = current_user unless current_user.nil?
     if signed_in?
       @spampost = Spampost.new
-      @spamfeed_items = Spampost.all 
+      @spamfeed_items = Spampost.limit(5) 
     end
   end
 
