@@ -53,17 +53,38 @@ body{
 }
 
 #athlete_creator_container {
-	background-color: #7766df; 
+	background-color: #7766df;
+	width: 600px; 
 	float: left;
 	padding: 5px;
 	margin: 10px;
 	
 }
+
+#athlete_creator_container .field {
+	display: inline-block;
+}
+
+#athlete_creator_container submit_button {
+	display: inline-block;
+}
+
+#athlete_creator_container tp_cost {
+	display: inline-block;
+}
+
+
 #roster_container {
-	margin: 10px;
 	background-color: #80c908;
-	float: right;
-	width:  300px;
+width: 200px;	
+margin-top: 15px;
+margin-left: auto;
+margin-right: auto;
+float: right;
+position: relative;
+padding: 10px;
+top: 0px;
+
 	
 }
 
