@@ -31,9 +31,12 @@ class User < ActiveRecord::Base
                        :length       => { :within => 6..40 }  
 
   has_many :spamposts
+  has_many :athletes
   before_save :encrypt_password
 
-
+  def roster
+    Athlete.where("user_id = ?", id)
+  end
 
   def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password) 

@@ -16,8 +16,11 @@ GoldGlory::Application.routes.draw do
 
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
-  resources :spamposts, :only => [:create, :destroy]
-  resource :spambox
+  resources :spamposts do
+    post :create
+  end
+  resources :athletes, :only => [:create, :index, :show]
+
 
   match '/signup',  :to => 'users#new'
   match '/signin',  :to => 'sessions#new'

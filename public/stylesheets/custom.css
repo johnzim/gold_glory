@@ -1,6 +1,5 @@
 body{
-	background-color: #7ad6e4;	
-
+	background-color: #aadcf4;
 }
 
 #page_container {
@@ -49,6 +48,33 @@ body{
 	float: left;
 }
 
+#athlete_creator_container {
+	background-color: #7766df; 
+	float: left;
+	padding: 5px;
+	margin: 10px;
+	
+}
+#roster_container {
+	margin: 10px;
+	background-color: #80c908;
+	float: right;
+	width:  300px;
+	
+}
+
+#roster_item {
+	padding: 2px;
+	margin: 5px;
+	background-color: #d42b2b;
+	color: white;		
+}
+
+#roster_item ul li {
+	display: inline-block;
+	
+}
+
 #content_container h1 {
 	padding: 20px;
 	
@@ -93,6 +119,10 @@ body{
 
 }
 
+#athlete_item ul il {	
+	display: inline-block;
+}
+
 #spamfeed ul {
 	margin: 2px;
 }
@@ -127,6 +157,15 @@ spampost_submit {
 	position: relative;
 	right: 75;
 }
+
+#athlete_form {
+	
+}
+
+#athlete_gender {
+	height: 15px;
+}
+
 
 #submit_button {
 	text-align: center;

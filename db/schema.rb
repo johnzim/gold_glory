@@ -10,7 +10,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110208195118) do
+ActiveRecord::Schema.define(:version => 20110213142842) do
+
+  create_table "athletes", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "gender"
+    t.integer  "age"
+    t.integer  "height"
+    t.integer  "weight"
+    t.integer  "skill"
+    t.integer  "power"
+    t.integer  "speed"
+    t.integer  "endurance"
+    t.integer  "reflex"
+    t.integer  "technique"
+    t.integer  "mentality"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
+  add_index "athletes", ["user_id"], :name => "index_athletes_on_user_id"
 
   create_table "spamboxes", :force => true do |t|
     t.datetime "created_at"

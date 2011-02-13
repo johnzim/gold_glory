@@ -1,0 +1,2 @@
+$("#spampost_content").val("")
+$("#spamfeed").html("<%= escape_javascript(render :partial => 'shared/spamfeed', :locals =>{:collection => @spamfeed_items}) %>")

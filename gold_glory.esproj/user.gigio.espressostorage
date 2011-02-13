@@ -7,23 +7,23 @@
 	<key>ESProjectWindowState</key>
 	<dict>
 		<key>ContentSize</key>
-		<string>{1106, 650}</string>
+		<string>{1182, 681}</string>
 		<key>ProjectURL</key>
 		<string>file://localhost/Users/gigio/rails_projects/gold_glory/gold_glory.esproj/</string>
 		<key>StateType</key>
 		<string>ProjectWindow</string>
 		<key>TopLeftPoint</key>
-		<string>{89, 765}</string>
+		<string>{20, 351}</string>
 	</dict>
 	<key>com.macrabbit.Espresso.FileManager.DisclosureCollapsed</key>
-	<false/>
+	<true/>
 	<key>com.macrabbit.Espresso.FileManager.FileControllerState</key>
 	<dict>
 		<key>ExpandedURLs</key>
 		<array>
 			<string>file://localhost/Users/gigio/rails_projects/gold_glory/app/views/layouts</string>
 			<string>file://localhost/Users/gigio/rails_projects/gold_glory/app/views/pages</string>
-			<string>file://localhost/Users/gigio/rails_projects/gold_glory/public</string>
+			<string>file://localhost/Users/gigio/rails_projects/gold_glory/public/stylesheets</string>
 		</array>
 	</dict>
 	<key>com.macrabbit.Espresso.Publisher.DisclosureCollapsed</key>

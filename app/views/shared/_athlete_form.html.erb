@@ -1,0 +1,45 @@
+<%= form_for @athlete, :remote => true do |f| %>
+  <%= render 'shared/error_messages', :object => f.object %>
+  <%= f.hidden_field(:user_id, :value => current_user.id)  %>
+
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= select(:athlete, :gender, [['Male'], ['Female']]) %>
+    </div>
+  <div class="field">
+    <%= f.label :age %><br />
+    <%= select(:athlete, :age, [['Normal', 1], ['Young', 2], ['Old', 3]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :height %><br />
+    <%= select(:athlete, :height, [['Normal', 1], ['Short', 2], ['Tall', 3]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br />
+    <%= select(:athlete, :weight, [['Normal', 1], ['Light', 2], ['Heavy', 3]]) %>
+  </div>
+  <div class="field">
+    <%= f.label :skill %><br />
+    <%= select(:athlete, :skill, [['Scrub'], ['Amateur'], ['Prodigy']]) %>
+  </div>
+ <div id="submit_button">
+    <%= f.submit "Submit" %>
+  </div>
+<div id="jq_result">
+ <p id="jq2"></p>
+</div>
+ <script>
+   function addTotal() {
+   var counter1 = $("#athlete_age").val();
+   var counter2 = parseInt(counter1);
+   $("#jq_result").html('The Age number is '+counter2);
+
+   }
+
+   $("#athlete_age").keyup(function() {
+   addTotal();
+
+   });
+ </script>
+
+<% end %>
