@@ -1,5 +1,7 @@
 body{
-	background-color: #aadcf4;
+	background-image:url('/images/8bitbg.png');
+	background-repeat: repeat-x;
+	background-color: #009000;
 }
 
 #page_container {
