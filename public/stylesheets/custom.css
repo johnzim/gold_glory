@@ -22,10 +22,12 @@ body{
 	position:  relative;
 	left:  80px;
 	top: 60px;
+	padding: 15px;
 	background-color: red;
+/*	background-image:url('/images/nexteventbg.png');*/
 	float: left;
-	height: 100px;
-	width:  400px;
+	height: 70px;
+	width:  370px;
 	
 }
 
