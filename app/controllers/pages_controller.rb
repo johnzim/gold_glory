@@ -12,6 +12,15 @@ class PagesController < ApplicationController
     end
   end
 
+  def tpspend
+    @title = "Spend Talent Points"
+    @athlete = Athlete.new
+    @roster_items = current_user.roster.paginate(:page => params[:page])
+    
+    @spampost = Spampost.new
+    @spamfeed_items = Spampost.limit(5) 
+  end
+
   def contact
     @title = "Title"
   end

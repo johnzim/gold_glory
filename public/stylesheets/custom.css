@@ -73,24 +73,62 @@ body{
 	display: inline-block;
 }
 
+#tps_edit_container {
+	background-color: #7766df;
+	width: 600px; 
+	float: left;
+	padding: 5px;
+	margin: 10px;
+	
+}
+
+#tps_edit_container .field {
+	display: inline-block;
+}
+
+#atps_edit_container submit_button {
+	display: inline-block;
+}
+
+#tps_edit_container tp_cost {
+	display: inline-block;
+}
+
+
 
 #roster_container {
 	background-color: #80c908;
-width: 200px;	
+width: 210px;	
 margin-top: 15px;
 margin-left: auto;
 margin-right: auto;
 float: right;
 position: relative;
-padding: 10px;
+padding: 5px;
 top: 0px;
 
 	
 }
 
+#athlete_tp_block {
+	float: left;	
+}
+
+#athlete_tp {
+	text-align: center;
+	
+}
+
+#athlete_tp li {
+	color: white;
+	display:  inline-block;
+}
+
 #roster_item {
-	padding: 2px;
-	margin: 5px;
+/*	text-align: center;*/
+	font-size: x-small;
+
+	margin: 2px;
 	background-color: #d42b2b;
 	color: white;		
 }
@@ -244,6 +282,28 @@ font-size: 16pt;
   list-style: square;
 }
 
+
+/*Text Styles*/
+
+#bronze_text {
+	color: #fe820e;
+}
+
+#silver_text {
+	color: #d6d4d7;
+}
+
+#gold_text {
+	color: #ffdd06;	
+}
+
+
+#tab_bar ul li {
+	padding: 5px;
+	list-style-type: none;
+	display:  inline-block;
+}
+
 nav {
   float: right;
 }
@@ -252,7 +312,6 @@ nav {
   padding: 0 0.7em;
   white-space: nowrap;
 }
-
 
 
 nav ul {

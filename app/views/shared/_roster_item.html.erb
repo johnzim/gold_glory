@@ -1,15 +1,40 @@
 <div id="roster_item">
   <ul>
-   <li><%= roster_item.age =%></li>
-   <li><%= roster_item.gender =%></li>
-   <li><%= roster_item.weight =%></li>
-   <li><%= roster_item.skill =%></li>
-   <li><%= roster_item.height =%></li>
-   <li><%= roster_item.power =%></li>
-   <li><%= roster_item.speed =%></li>
-   <li><%= roster_item.endurance =%></li>
-   <li><%= roster_item.reflex =%></li>
-   <li><%= roster_item.technique =%></li>
-   <li><%= roster_item.mentality =%></li>
+     <li>Gender: <%= roster_item.gender =%>
+       <br />
+    Age: 
+     <% if roster_item.age == 1 %>
+     Normal
+
+     <% elsif roster_item.age == 2 %>
+     Old
+     <% else %>
+     Young
+     <% end %>
+  </li>
+     <li>
+   Weight:     
+     <% if roster_item.weight == 1 %>
+     Normal
+
+     <% elsif roster_item.weight == 2 %>
+     Light
+     <% else %>
+     Heavy
+     <% end %>
+<br />
+   Skill:    
+     <% if roster_item.skill == 1 %>
+     <span id="silver_text">Amateur</span>
+     
+     <% elsif roster_item.skill == 2 %>
+     <span id="bronze_text">Scrub</span>
+     <% else %>
+     <span id="gold_text">Prodigy</span>
+     <% end %></li>
+
+   <% if creation_mode? %><br />
+   <%= link_to "Spend TPs", edit_athlete_path(roster_item.id), :remote => true %>
+   <% end %>
   </ul>
 </div>

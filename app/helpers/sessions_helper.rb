@@ -27,6 +27,9 @@ module SessionsHelper
     @current_user ||= User.find_by_id(session[:remember_token])
   end
 
+  def creation_mode?
+    current_user.creation_mode?
+  end
 
   def signed_in?
     !current_user.nil?

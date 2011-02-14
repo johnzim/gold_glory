@@ -14,12 +14,5 @@ describe "Athletes" do
 
   describe "Creating Athletes" do
     
-    describe "with the correct user should work" do
-      lambda do
-        post :create, :athlete => @attr
-      end.should_not change {Athlete.count}
-      
-    end
-    
   end
 end

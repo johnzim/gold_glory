@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110209220407
+# Schema version: 20110214184352
 #
 # Table name: athletes
 #
@@ -18,6 +18,7 @@
 #  mentality  :integer
 #  created_at :datetime
 #  updated_at :datetime
+#  name       :string(255)
 #
 
 class Athlete < ActiveRecord::Base

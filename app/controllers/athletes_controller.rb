@@ -17,15 +17,37 @@ class AthletesController < ApplicationController
       format.html { redirect_to root_path }
     end
 
+  end 
+
+  def edit
+    @edathlete = Athlete.find(params[:id])
+    @athlete = Athlete.find(params[:id])
+    respond_to do |format|
+      format.js
+    end
   end
 
-
-  def show
+  def update
+    @athlete = Athlete.find(params[:id])
+    @athlete.update_attributes(params[:athlete])
+    @roster_items = current_user.roster.paginate(:page => params[:page])
+    respond_to do |format|
+      format.js
+    end
+  end
+ 
+ def show
     @title = "View Athlete"
     @athlete = Athlete.find(params[:id])
   end
 
-
+ def tpspend
+    @title = "Spend Talent Points"
+    @roster_items = current_user.roster.paginate(:page => params[:page])
+    respond_to do |format|
+      format.js
+    end
+  end
 
   def index
     @title = "All Athletes"

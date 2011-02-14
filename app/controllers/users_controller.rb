@@ -28,6 +28,7 @@ class UsersController < ApplicationController
     redirect_to(root_path) unless !signed_in?
 
     @user = User.new(params[:user])
+    @user.creation_mode = true
     if @user.save
       flash[:success] = "Welcome to the Sample App!"
       sign_in @user

@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110206212724
+# Schema version: 20110214184352
 #
 # Table name: users
 #
@@ -11,6 +11,7 @@
 #  updated_at         :datetime
 #  encrypted_password :string(255)
 #  salt               :string(255)
+#  creation_mode      :boolean
 #
 
 
