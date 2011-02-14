@@ -1,9 +1,11 @@
 <div id="tab_bar">
   <ul>
+    <% if signed_in? %>
     <% if creation_mode? %>
     <li>
       <%= link_to "Creation Mode", "/tpspend" %>
     </li>
+    <% end %>
     <% end %>
     <li>
       <%= link_to "Home", root_path %>
