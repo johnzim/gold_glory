@@ -9,7 +9,8 @@ body{
 	width: 900px;
 	margin-left: auto;
 	margin-right: auto;
-	height: 2000px;
+	height: auto;
+
 }
 
 #logo_image {
@@ -23,11 +24,14 @@ body{
 	left:  80px;
 	top: 60px;
 	padding: 15px;
-/*	background-color: red;*/
-	background-image:url('/images/nexteventbg2.png');
+	background-color: red;
+/*	background-image:url('/images/nexteventbg2.png');*/
 	float: left;
 	height: 70px;
 	width:  370px;
+	-moz-box-shadow: 4px 4px 15px #000000;
+	-webkit-box-shadow: 4px 4px 15px #000000;
+	box-shadow: 4px 4px 15px #000000;
 	
 }
 
@@ -42,6 +46,10 @@ body{
 
 
 #content_container {
+	-moz-box-shadow: 4px 4px 15px #000000;
+	-webkit-box-shadow: 4px 4px 15px #000000;
+	box-shadow: 4px 4px 15px #000000;
+
 	background-color: #f0e7c4;
 	width: 630px;
 	min-height: 500px;
@@ -181,6 +189,9 @@ padding: 5px;
 	position: relative;
 	padding: 10px;
 	top: 0px;
+	-moz-box-shadow: 4px 4px 15px #000000;
+	-webkit-box-shadow: 4px 4px 15px #000000;
+	box-shadow: 4px 4px 15px #000000;
 }
 
 #results_container{
@@ -190,6 +201,10 @@ padding: 5px;
 	margin-left: auto;
 	position: relative;
 	top: 25px;
+	-moz-box-shadow: 4px 4px 15px #000000;
+	-webkit-box-shadow: 4px 4px 15px #000000;
+	box-shadow: 4px 4px 15px #000000;
+	
 }
 
 #results_container h2 {
