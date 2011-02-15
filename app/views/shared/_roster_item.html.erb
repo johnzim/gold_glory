@@ -1,6 +1,13 @@
-<div id="roster_item">
+<div id=<%= roster_item.id %> class="roster_item">
+ 
   <ul>
-     <li>Gender: <%= roster_item.gender =%>
+    <li> <% if roster_item.gender == "Male" %>
+  <img id="athlete_portrait" src='images/male_ath_icon.png'>
+  <% else %>
+  <img id="athlete_portrait" src='images/female_ath_icon.png'>
+
+  <% end %></li>
+     <li><%= roster_item.name %><br/>Gender: <%= roster_item.gender =%>
        <br />
     Age: 
      <% if roster_item.age == 1 %>
@@ -11,9 +18,10 @@
      <% else %>
      Young 
      <% end %>
-  </li>
+
+ </li>
      <li>
-   Weight:     
+ Weight:     
      <% if roster_item.weight == 1 %>
      Normal
 
@@ -21,6 +29,16 @@
      Light
      <% else %>
      Heavy
+     <% end %>
+<br />
+ Height:     
+     <% if roster_item.height == 1 %>
+     Normal
+
+     <% elsif roster_item.height == 2 %>
+     Short
+     <% else %>
+     Tall
      <% end %>
 <br />
    Skill:    
@@ -31,10 +49,11 @@
      <span id="bronze_text">Scrub</span>
      <% else %>
      <span id="gold_text">Prodigy</span>
-     <% end %></li>
-
+     <% end %>
+</li><li>
    <% if creation_mode? %><br />
-   <%= link_to "Spend TPs", edit_athlete_path(roster_item.id), :remote => true %>
-   <% end %>
+   <img src="images/tp.png"><br />
+   <%= link_to "Edit TPs", edit_athlete_path(roster_item.id), :remote => true %>
+   <% end %></li>
   </ul>
 </div>

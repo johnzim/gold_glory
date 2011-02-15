@@ -1,0 +1,35 @@
+#roster_container {
+	background-color: #80c908;
+width: 210px;	
+margin-top: 15px;
+margin-left: auto;
+margin-right: auto;
+float: right;
+position: relative;
+padding: 5px;
+top: 0px;
+
+	
+}
+
+
+#roster_item {
+/*	text-align: center;*/
+	font-size: x-small;
+
+	margin: 2px;
+	background-color: #d42b2b;
+	color: white;		
+}
+
+#roster_item ul li {
+	display: inline-block;
+	margin: 5px;	
+}
+
+#roster_item ul li a {
+	
+	color: white;
+}
+
+

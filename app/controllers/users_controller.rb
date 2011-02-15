@@ -23,6 +23,7 @@ class UsersController < ApplicationController
     @title = @user.name
   end
   
+  
   def create
 
     redirect_to(root_path) unless !signed_in?
@@ -30,9 +31,10 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     @user.creation_mode = true
     if @user.save
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "Welcome to the Gold and Glory!"
       sign_in @user
       redirect_to user_path(@user)
+      seed_roster @user
     else
       @title = "Sign up"
       @user[:password] = ""

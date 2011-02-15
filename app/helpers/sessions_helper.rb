@@ -10,6 +10,22 @@ module SessionsHelper
  end  
  
 
+  def seed_roster(user)
+    @attr_male = {:name => "John Smith", :age => 1, :height => 1, :gender => "Male", :weight =>1, :skill => 1}
+    @attr_female = {:name => "Jane Doe",:age => 1, :height => 1, :gender => "Female", :weight =>1, :skill => 1}
+
+    10.times do
+      @athlete = user.athletes.build(@attr_male)
+      @athlete.save
+    end
+
+    10.times do
+      @athlete = user.athletes.build(@attr_female)
+      @athlete.save
+    end
+  end
+
+
   def sign_in(user)
     session[:remember_token] = [user.id, user.salt]
     self.current_user = user
@@ -29,6 +45,10 @@ module SessionsHelper
 
   def creation_mode?
     current_user.creation_mode?
+  end
+
+  def admin?
+    current_user.admin?
   end
 
   def signed_in?

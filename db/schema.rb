@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110214184352) do
+ActiveRecord::Schema.define(:version => 20110215181318) do
 
   create_table "athletes", :force => true do |t|
     t.integer  "user_id"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20110214184352) do
     t.string   "encrypted_password"
     t.string   "salt"
     t.boolean  "creation_mode"
+    t.boolean  "admin"
   end
 
 end

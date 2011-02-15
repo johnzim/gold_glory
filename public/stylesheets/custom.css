@@ -44,12 +44,17 @@ body{
 #content_container {
 	background-color: #f0e7c4;
 	width: 630px;
-	height:  900px;
+	min-height: 500px;
 	margin-right: auto;
 	position: relative;
 	top: 15px;
 	left: 20px;
 	float: left;
+}
+
+#content_container h2 {
+	font-size: medium;
+	padding: 20px;
 }
 
 #athlete_creator_container {
@@ -96,19 +101,6 @@ body{
 
 
 
-#roster_container {
-	background-color: #80c908;
-width: 210px;	
-margin-top: 15px;
-margin-left: auto;
-margin-right: auto;
-float: right;
-position: relative;
-padding: 5px;
-top: 0px;
-
-	
-}
 
 #athlete_tp_block {
 	float: left;	
@@ -123,20 +115,51 @@ top: 0px;
 	color: white;
 	display:  inline-block;
 }
+#roster_container {
+	background-color: #80c908;
+width: 600px;	
+margin: 10px;
+float: right;
+padding: 5px;
 
-#roster_item {
+	
+}
+
+.roster_item {
 /*	text-align: center;*/
-	font-size: x-small;
+	font-size: 10pt;
 
 	margin: 2px;
 	background-color: #d42b2b;
 	color: white;		
 }
 
-#roster_item ul li {
-	display: inline-block;
-	
+
+.roster_item {
+/*	text-align: center;*/
+	font-size: 10pt;
+
+	margin: 2px;
+	background-color: #d42b2b;
+	color: white;		
 }
+
+.roster_item ul {
+	
+	margin: 4px;
+}
+
+.roster_item ul li {
+	display: inline-block;
+	margin: 5px;	
+}
+
+.roster_item ul li a {
+	
+	color: white;
+}
+
+
 
 #content_container h1 {
 	padding: 20px;

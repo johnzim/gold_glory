@@ -13,7 +13,7 @@ class PagesController < ApplicationController
   end
 
   def tpspend
-    @title = "Spend Talent Points"
+    @title = "3"
     @athlete = Athlete.new
     @roster_items = current_user.roster.paginate(:page => params[:page])
      

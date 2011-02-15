@@ -1,3 +1,7 @@
-<ul><li>Name: <%= link_to user.name, user %></li></ul>
-<ul><li>Email: <%= user.email %></li></ul>
-<ul><li>Country: <%= user.country %></li></ul>
+<ul><li>Name: <%= link_to user.name, user %></li>
+<li>Email: <%= user.email %></li>
+<li>Country: <%= user.country %></li> </ul>
+
+<% if current_user.admin? %>
+
+<% end %> 
