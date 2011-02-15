@@ -103,11 +103,12 @@ body{
 
 
 #athlete_tp_block {
-	float: left;	
+	margin: 5px;
 }
 
 #athlete_tp {
 	text-align: center;
+	
 	
 }
 
@@ -151,7 +152,7 @@ padding: 5px;
 
 .roster_item ul li {
 	display: inline-block;
-	margin: 5px;	
+	padding: 10px;	
 }
 
 .roster_item ul li a {
