@@ -53,7 +53,11 @@
 </li><li>
    <% if creation_mode? %><br />
    <img src="images/tp.png"><br />
-   <%= link_to "Edit TPs", edit_athlete_path(roster_item.id), :remote => true %>
-   <% end %></li>
+   <%= link_to "Edit TPs", edit_athlete_path(roster_item.id), :remote => true, :class =>"tp_link" %>
+   </li>
+<li>
+     <%= roster_item.tps %>
+</li>
+<% end %>
   </ul>
 </div>

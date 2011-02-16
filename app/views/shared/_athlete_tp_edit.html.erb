@@ -15,13 +15,33 @@
 
 </li>
    <li>
-    <%= f.submit "Submit Changes" %>
-<% end %>
-
+  <%= f.submit "Submit Changes" %>
     </li>
+   <li id="tp_cost">
+   </li>
    <script>
+
+function calc_tp_cost() {
+    var skill_value2 = $("#athlete_skill").val();
+
+    if (skill_value2 == 1) {
+	skill_value2 = 20;
+    }
+    else if (skill_value2 == 2) {
+	skill_value2 = 10;
+    }
+    else {
+	skill_value2 = 50;
+    }
+
+    $('#tp_cost').html(""+skill_value2);
+}
+
+$('#athlete_skill').change(calc_tp_cost);
+calc_tp_cost();
    </script>
 
  </ul>
 </div>
 </div>
+<% end %>

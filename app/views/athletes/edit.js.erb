@@ -1,1 +1,6 @@
+  if ($('#athlete_to_block').length != 0) {
+  } else {
+    $("#roster_container").html("<%= escape_javascript(render :partial => '/shared/roster', :locals =>{:collection => @roster_items}) %>")
+  }
+
 $('#<%= @athlete.id %>').html("<%= escape_javascript(render :partial => '/shared/athlete_tp_edit') %>")

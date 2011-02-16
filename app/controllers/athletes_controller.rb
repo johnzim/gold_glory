@@ -1,5 +1,5 @@
 class AthletesController < ApplicationController
-
+  include AthletesHelper
   before_filter :authenticate 
 
   def create
@@ -20,8 +20,12 @@ class AthletesController < ApplicationController
   end 
 
   def edit
+
+    @roster_items = current_user.roster.paginate(:page => params[:page])
+
     @edathlete = Athlete.find(params[:id])
     @athlete = Athlete.find(params[:id])
+    @tp_cost = tp_cost(@athlete)
     respond_to do |format|
       format.js
     end
@@ -30,6 +34,7 @@ class AthletesController < ApplicationController
   def update
     @athlete = Athlete.find(params[:id])
     @athlete.update_attributes(params[:athlete])
+    @athlete.update_attributes(:tps => tp_cost(@athlete))
     @roster_items = current_user.roster.paginate(:page => params[:page])
     respond_to do |format|
       format.js
@@ -39,11 +44,13 @@ class AthletesController < ApplicationController
  def show
     @title = "View Athlete"
     @athlete = Athlete.find(params[:id])
+
   end
 
  def tpspend
     @title = "Spend Talent Points"
     @roster_items = current_user.roster.paginate(:page => params[:page])
+
     respond_to do |format|
       format.js
     end
