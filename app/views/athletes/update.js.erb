@@ -1,1 +1,1 @@
-$("#roster_container").html("<%= escape_javascript(render :partial => '/shared/roster', :locals =>{:collection => @roster_items}) %>")
+$('<%= h("#") + h(@athlete.id)%>').html("<%= escape_javascript(render :partial => 'shared/roster_item_filler', :locals => { :roster_item => @athlete }) %>")
