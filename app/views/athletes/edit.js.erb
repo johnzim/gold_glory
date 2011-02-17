@@ -1,6 +1,5 @@
-  if ($('#athlete_to_block').length != 0) {
-  } else {
-    $("#roster_container").html("<%= escape_javascript(render :partial => '/shared/roster', :locals =>{:collection => @roster_items}) %>")
-  }
-
-$('#<%= @athlete.id %>').html("<%= escape_javascript(render :partial => '/shared/athlete_tp_edit') %>")
+$('.roster_stats').fadeIn('slow')
+$('.edit_panel').hide()
+$('#<%= h("stats_") + h(@athlete.id) %>').hide()
+$('#<%= h("edit_") + h(@athlete.id) %>').html("<%= escape_javascript(render :partial => '/shared/athlete_tp_edit') %>")
+$('#<%= h("edit_") + h(@athlete.id) %>').fadeIn('slow')

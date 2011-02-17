@@ -126,7 +126,7 @@ body{
 }
 #roster_container {
 	background-color: #80c908;
-width: 600px;	
+width: 600px;
 margin: 10px;
 float: right;
 padding: 5px;
@@ -134,19 +134,16 @@ padding: 5px;
 	
 }
 
-.roster_item {
-/*	text-align: center;*/
-	font-size: 10pt;
 
-	margin: 2px;
-	background-color: #d42b2b;
-	color: white;		
+.edit_panel {
+
 }
 
 
 .roster_item {
 /*	text-align: center;*/
 	font-size: 10pt;
+	height: 100px;	
 
 	margin: 2px;
 	background-color: #d42b2b;
@@ -168,7 +165,10 @@ padding: 5px;
 	color: white;
 }
 
-
+.roster_icon {
+	padding: 10px;
+	float: left;
+}
 
 #content_container h1 {
 	padding: 20px;

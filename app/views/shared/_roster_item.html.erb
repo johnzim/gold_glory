@@ -1,13 +1,24 @@
-<div id=<%= roster_item.id %> class="roster_item">
- 
-  <ul>
-    <li> <% if roster_item.gender == "Male" %>
-  <img id="athlete_portrait" src='images/male_ath_icon.png'>
-  <% else %>
-  <img id="athlete_portrait" src='images/female_ath_icon.png'>
+<script>
+$(document).ready(function() {
+  $(<%= h("edit_") + h(roster_item.id) %>).hide();
+});
+</script>
 
-  <% end %></li>
-     <li><%= roster_item.name %><br/>Gender: <%= roster_item.gender =%>
+<div id=<%= roster_item.id %> class = "roster_item">
+ 
+ 
+	<div id=<%= h("pic_") + roster_item.id %> class="roster_icon">
+		<% if roster_item.gender == "Male" %>
+  			<img id="athlete_portrait" src='images/male_ath_icon.png'>
+  		<% else %>
+  			<img id="athlete_portrait" src='images/female_ath_icon.png'>
+		<% end %>
+	</div>
+	
+	<div id=<%= h("stats_") + h(roster_item.id) %> class="roster_stats">
+		
+  <ul>
+  	<li><%= roster_item.name %><br/>Gender: <%= roster_item.gender =%>
        <br />
     Age: 
      <% if roster_item.age == 1 %>
@@ -60,4 +71,8 @@
 </li>
 <% end %>
   </ul>
+  </div>
+
+<div id=<%= h("edit_") + h(roster_item.id) %> class="edit_panel">
 </div>
+</div>	

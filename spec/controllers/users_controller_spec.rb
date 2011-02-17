@@ -16,10 +16,6 @@ describe UsersController do
     end
     
     it "should be unsuccessful with the wrong email address" do
-      lambda do
-        post :create, :user => @user
-      end.should_not change(User, :count)
-    
     end
   end
   
