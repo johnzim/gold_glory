@@ -363,3 +363,40 @@ nav ul li {
   display: inline-block;
   padding: 0.2em 0;
 }
+
+
+#tp_total_container {
+	z-index: 2;
+	position: absolute;
+	right: 30px; 
+	width: 200px;
+	height: 100px;
+	top: 450px;
+	margin-left: 40px;
+}
+
+
+#tp_total_content {
+	top: 0;
+	margin-top: 20px;
+	background-color: red;
+	color: white;
+	font-size: medium;
+	-moz-box-shadow: 4px 4px 15px #000000;
+	-webkit-box-shadow: 4px 4px 15px #000000;
+	box-shadow: 4px 4px 15px #000000;
+	z-index: 2;
+	width: 200px;
+	height: 100px;
+
+
+}
+
+
+
+.fixed {
+	position: fixed;
+	top: 0;
+	right: 30px; 
+
+}

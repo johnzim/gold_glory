@@ -12,17 +12,46 @@
   <%= render 'shared/tab_bar' %>
 </div>
 
+<div id = "tp_total_container">
+	<div id = "tp_total_content">
+  		<p>TPs Spent: <span id="live_tp_tally" class="fat_white"></span></p>
+	</div>	
+</div>
+
 <div id = "content_container">
   <h1>Spend those talent points!</h1>
-  <p>Live total (not updating yet): </p><span id="live_tp_tally"></span></p>
   <script>
-	$(document).ready(function() {
-  		var tpsspent = 0;
+   function tpspenttotal() {
+   		var tpsspent = 0;
   		$(".tps_spent").each(function() {
   			tpsspent += Number($(this).text());
   		}); 
   		$("#live_tp_tally").text(""+tpsspent);
-  	});
+	};
+	
+	
+
+	$(document).ready(function() {
+		var top = $('#tp_total_content').offset().top - parseFloat($('#tp_total_content').css('marginTop'));
+		$(window).scroll(function() {
+	
+			// find the y position of the scroll
+			var y= $(this).scrollTop();			
+			// if below the start point
+			
+			if (y >= top) {
+				$('#tp_total_content').addClass('fixed');
+			}
+			else {
+				$('#tp_total_content').removeClass('fixed');
+			}
+			// if so add fixed
+			
+			
+			// else remove
+		});
+	});
+   
     
   </script>
   
