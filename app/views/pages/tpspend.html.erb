@@ -32,7 +32,7 @@
   		}); 
   		tpleft -= tpsspent
   		if (tpleft > 0) {
-	  		$("#live_tp_tally").text(""+tpleft +" TPs Remaining");
+	  		$("#live_tp_tally").text(""+tpleft +"  Unspent TPs");
   			$('#tp_total_content').removeClass('tp_overspent');
   			$('#tp_total_content').removeClass('tp_perfect');
 
@@ -41,7 +41,7 @@
 
   		}
   		else if (tpleft < 0) {
-  			$("#live_tp_tally").text(""+tpleft +" TPs Overspent");
+  			$("#live_tp_tally").text(""+tpleft +" TPs");
   			$('#tp_total_content').removeClass('tp_underspent');
   			$('#tp_total_content').removeClass('tp_perfect');
 
