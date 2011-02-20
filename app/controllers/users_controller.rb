@@ -33,7 +33,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:success] = "Welcome to the Gold and Glory!"
       sign_in @user
-      redirect_to user_path(@user)
+      redirect_to root_path
       seed_roster @user
     else
       @title = "Sign up"
