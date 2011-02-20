@@ -3,7 +3,7 @@
 </div>
 <div id = "tp_total_container">
 	<div id = "tp_total_content">
-  		<p><span id="live_tp_tally" class="fat_white"></span> TPs Remaining</p>
+  		<p><span id="live_tp_tally" class="fat_white"></span></p>
 	</div>	
 </div>
 
@@ -22,7 +22,8 @@
 <div id = "content_container">
   <h1>Spend those talent points!</h1>
   <script>
-   function tpspenttotal() {
+   function tp_spent_total() {
+   		console.log("TPspentTotalcalled");
    		var tpsspent = 0;
   		var tpleft = 500;
   		$(".tps_spent").each(function() {
@@ -30,7 +31,33 @@
   			// OR new var = tpspent -500. Test best.
   		}); 
   		tpleft -= tpsspent
-  		$("#live_tp_tally").text(""+tpleft);
+  		if (tpleft > 0) {
+	  		$("#live_tp_tally").text(""+tpleft +" TPs Remaining");
+  			$('#tp_total_content').removeClass('tp_overspent');
+  			$('#tp_total_content').removeClass('tp_perfect');
+
+			$('#tp_total_content').addClass('tp_underspent');
+
+
+  		}
+  		else if (tpleft < 0) {
+  			$("#live_tp_tally").text(""+tpleft +" TPs Overspent");
+  			$('#tp_total_content').removeClass('tp_underspent');
+  			$('#tp_total_content').removeClass('tp_perfect');
+
+			$('#tp_total_content').addClass('tp_overspent');
+
+  		}
+  		
+  		else {
+  			$("#live_tp_tally").text("");
+  			$('#tp_total_content').removeClass('tp_underspent');
+  			$('#tp_total_content').removeClass('tp_overspent');
+
+			$('#tp_total_content').addClass('tp_perfect');
+
+  		}
+  		
 	};
 	
 	

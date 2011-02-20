@@ -135,6 +135,8 @@ padding: 5px;
 }
 
 #roster_container h3 {
+	color: white;
+	font-size: large;
 	text-align: center;
 	padding-top: 10px;
 }
@@ -396,7 +398,6 @@ nav ul li {
 	top: 0;
 	text-align: right;
 	margin-top: 20px;
-	background-image:url('/images/tp_left_pointer.png');
 	color: white;
 	font-size: medium;
 	z-index: 2;
@@ -412,7 +413,20 @@ nav ul li {
 	padding-right: 15px;
 }
 
+.tp_overspent {
+	background-image:url('/images/tp_left_pointer_red.png');
+}
 
+.tp_perfect{
+	background-image:url('/images/tp_left_pointer_green.png');
+
+}
+
+
+.tp_underspent{
+	background-image:url('/images/tp_left_pointer.png');
+
+}
 
 .fixed {
 	position: fixed;

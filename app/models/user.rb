@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110215181318
+# Schema version: 20110220143333
 #
 # Table name: users
 #
@@ -13,6 +13,7 @@
 #  salt               :string(255)
 #  creation_mode      :boolean
 #  admin              :boolean
+#  tp_total           :integer
 #
 
 
@@ -35,9 +36,18 @@ class User < ActiveRecord::Base
   has_many :spamposts
   has_many :athletes
   before_save :encrypt_password
+  include AthletesHelper
 
   def roster
     Athlete.where("user_id = ?", id)
+  end
+  
+  def roster_tp_cost
+  	@roster = roster
+  	@roster.each do |athlete|
+		@tp_cost += tp_cost(athlete)  
+	end
+	@tp_cost		
   end
 
   def has_password?(submitted_password)
