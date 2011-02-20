@@ -69,24 +69,27 @@
 		///document.getElementById(controlId).offsetTop
 	
 			// find the y position of the scroll
-			var y = 0;
 			// as of 1.4.2 the mobile safari reports wrong values on offset()
 // http://dev.jquery.com/ticket/6446
 // remove once it's fixed
-			if((navigator.userAgent.match(/iPad/i))) {
-  				(function($) {
-	      			$.fn.offsetOld = $.fn.offset;
-    	  			$.fn.offset = function() {
-        				var result = this.offsetOld();
-        				result.top -= window.scrollY;
-        				y = result.top;
-      				};
-				})
-			}
+// as of 1.4.2 the mobile safari reports wrong values on offset()
+// http://dev.jquery.com/ticket/6446
+// remove once it's fixed
+if((navigator.userAgent.match(/iPad/i))) {
+  (function($) {
+      $.fn.offsetOld = $.fn.offset;
+      $.fn.offset = function() {
+        var result = this.offsetOld();
+        result.top -= window.scrollY;
+        result.left -= window.scrollX;
+        return result;
+      };
+  })(jQuery);
+}
+
 			
-			else{
-				y = $(this).scrollTop();
-			}	
+				var y = $(this).scrollTop();
+			
 				
 			
 			if (y >= top) {
