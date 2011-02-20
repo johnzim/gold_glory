@@ -65,10 +65,21 @@
 	$(document).ready(function() {
 		var top = $('#tp_total_content').offset().top - parseFloat($('#tp_total_content').css('marginTop'));
 		$(window).scroll(function() {
+		//
+		///document.getElementById(controlId).offsetTop
 	
 			// find the y position of the scroll
-			var y= $(this).scrollTop();			
-			// if below the start point
+			var y = 0;
+			
+			if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1) || (navigator.userAgent.indexOf('iPad') != -1)) {
+			
+				y = $(this).scrollTop() - $(window).scrollTop();			
+				// if below the start point
+			}	
+			else{
+				y = $(this).scrollTop();
+			}	
+				
 			
 			if (y >= top) {
 				$('#tp_total_content').addClass('fixed');

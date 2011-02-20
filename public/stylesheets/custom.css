@@ -2,16 +2,36 @@ body{
 	background-image:url('/images/8bitbg.png');
 	background-repeat: repeat-x;
 	background-color: #009000;
+	min-height: 100%;
+
 }
+
 
 #page_container {
 /*	background-color: #dddddd;*/
 	width: 900px;
 	margin-left: auto;
 	margin-right: auto;
-	height: auto;
+	margin: 0 auto -60px;
+	
+
 
 }
+
+
+.footer{
+	color: white;
+	clear: both;
+	font-size: x-small;
+	text-align: center;
+ 	position: relative;
+ 	z-index: 10;
+ 	bottom: -45px;
+	height: 4em;
+	margin-top: -12em;
+}
+
+
 
 #logo_image {
 	position:  relative;
