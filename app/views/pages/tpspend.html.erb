@@ -14,7 +14,7 @@
 
 <div id = "tp_total_container">
 	<div id = "tp_total_content">
-  		<p>TPs Spent: <span id="live_tp_tally" class="fat_white"></span></p>
+  		<p><span id="live_tp_tally" class="fat_white"></span> TPs Remaining</p>
 	</div>	
 </div>
 
@@ -23,10 +23,13 @@
   <script>
    function tpspenttotal() {
    		var tpsspent = 0;
+  		var tpleft = 500;
   		$(".tps_spent").each(function() {
-  			tpsspent += Number($(this).text());
+  			tpsspent += Number($(this).text());  			
+  			// OR new var = tpspent -500. Test best.
   		}); 
-  		$("#live_tp_tally").text(""+tpsspent);
+  		tpleft -= tpsspent
+  		$("#live_tp_tally").text(""+tpleft);
 	};
 	
 	

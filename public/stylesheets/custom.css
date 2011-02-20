@@ -134,9 +134,14 @@ padding: 5px;
 	
 }
 
+#roster_container h3 {
+	text-align: center;
+	padding-top: 10px;
+}
+
 
 .edit_panel {
-
+	padding-top: 20px;
 }
 
 
@@ -144,30 +149,40 @@ padding: 5px;
 /*	text-align: center;*/
 	font-size: 10pt;
 	height: 100px;	
-
 	margin: 2px;
-	background-color: #d42b2b;
+	margin-bottom: 10px;
+	background-image:url('/images/roster_item_bg3.png');
 	color: white;		
 }
 
-.roster_item ul {
-	
-	margin: 4px;
+.roster_stats ul {
+	padding-top: 20px;
+	height:30px;
 }
 
-.roster_item ul li {
+.roster_stats ul li {
 	display: inline-block;
-	padding: 10px;	
+	padding-right: 20px;
+
 }
 
-.roster_item ul li a {
-	
+.roster_stats ul li a {
 	color: white;
 }
 
 .roster_icon {
-	padding: 10px;
+	padding: 6px;
 	float: left;
+}
+
+.roster_stats {
+	float:left;
+	height: 50px;
+}
+
+#athlete_portrait {
+	padding: 10px;
+	
 }
 
 #content_container h1 {
@@ -367,29 +382,34 @@ nav ul li {
 
 #tp_total_container {
 	z-index: 2;
-	position: absolute;
-	right: 30px; 
-	width: 200px;
-	height: 100px;
-	top: 450px;
+	position: relative;
+	float:right;
+	margin-right: 235px;
+	width: 165px;
+	height: 55px;
+	top: 160px;
 	margin-left: 40px;
 }
 
 
 #tp_total_content {
 	top: 0;
+	text-align: right;
 	margin-top: 20px;
-	background-color: red;
+	background-image:url('/images/tp_left_pointer.png');
 	color: white;
 	font-size: medium;
-	-moz-box-shadow: 4px 4px 15px #000000;
-	-webkit-box-shadow: 4px 4px 15px #000000;
-	box-shadow: 4px 4px 15px #000000;
 	z-index: 2;
-	width: 200px;
-	height: 100px;
+	width: 175px;
+	height: 55px;
 
 
+}
+
+#tp_total_content p {
+
+	padding-top: 12px;
+	padding-right: 15px;
 }
 
 
@@ -397,6 +417,5 @@ nav ul li {
 .fixed {
 	position: fixed;
 	top: 0;
-	right: 30px; 
 
 }
