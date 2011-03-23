@@ -3,9 +3,16 @@
 </div>
 <div id = "tp_total_container">
 	<div id = "tp_total_content">
+	  <div id = "tp_total_board">
   		<p><span id="live_tp_tally" class="fat_white"></span></p>
+	  </div>
+	  <div id = "refund_total_board" class="refund_underspent">
+  		<p><span id="live_refund_text">Refunds</span><span id="live_refund_tally">2</span></p>
+	  </div>
+
 	</div>	
 </div>
+
 
       
 
@@ -22,9 +29,30 @@
 <div id = "content_container">
   <h1>Spend those talent points!</h1>
   <script>
+
+    function refund_total() {
+    var refundspent = 0;
+   $(".penalty_tps").each(function() {
+  			refundspent += Number($(this).text());  			
+ 		}); 
+	  		$("#live_refund_tally").text(""+refundspent);
+
+      		if (refundspent > 40) {
+			$('#refund_total_board').removeClass('refund_underspent');
+  			$('#refund_total_board').addClass('refund_overspent');
+    }
+    else {
+			$('#refund_total_board').removeClass('refund_overspent');
+  			$('#refund_total_board').addClass('refund_underspent');
+    }
+    };
+
+
    function tp_spent_total() {
    		console.log("TPspentTotalcalled");
-   		var tpsspent = 0;
+   refund_total();
+		
+    var tpsspent = 0;
   		var tpleft = 500;
   		$(".tps_spent").each(function() {
   			tpsspent += Number($(this).text());  			
@@ -33,28 +61,35 @@
   		tpleft -= tpsspent
   		if (tpleft > 0) {
 	  		$("#live_tp_tally").text(""+tpleft +"  Unspent TPs");
-  			$('#tp_total_content').removeClass('tp_overspent');
-  			$('#tp_total_content').removeClass('tp_perfect');
+  			$('#tp_total_board').removeClass('tp_overspent');
+  			$('#tp_total_board').removeClass('tp_perfect');
 
-			$('#tp_total_content').addClass('tp_underspent');
+			$('#tp_total_board').addClass('tp_underspent');
+
+
+   
 
 
   		}
   		else if (tpleft < 0) {
   			$("#live_tp_tally").text(""+tpleft +" TPs");
-  			$('#tp_total_content').removeClass('tp_underspent');
-  			$('#tp_total_content').removeClass('tp_perfect');
+  			$('#tp_total_board').removeClass('tp_underspent');
+  			$('#tp_total_board').removeClass('tp_perfect');
 
-			$('#tp_total_content').addClass('tp_overspent');
+			$('#tp_total_board').addClass('tp_overspent');
+
+
+
 
   		}
   		
   		else {
   			$("#live_tp_tally").text("");
-  			$('#tp_total_content').removeClass('tp_underspent');
-  			$('#tp_total_content').removeClass('tp_overspent');
+  			$('#tp_total_board').removeClass('tp_underspent');
+  			$('#tp_total_board').removeClass('tp_overspent');
 
-			$('#tp_total_content').addClass('tp_perfect');
+			$('#tp_total_board').addClass('tp_perfect');
+
 
   		}
   		
@@ -69,9 +104,7 @@
 		///document.getElementById(controlId).offsetTop
 	
 			// find the y position of the scroll
-			// as of 1.4.2 the mobile safari reports wrong values on offset()
-// http://dev.jquery.com/ticket/6446
-// remove once it's fixed
+
 // as of 1.4.2 the mobile safari reports wrong values on offset()
 // http://dev.jquery.com/ticket/6446
 // remove once it's fixed

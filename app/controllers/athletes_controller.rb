@@ -35,6 +35,7 @@ class AthletesController < ApplicationController
     @athlete = Athlete.find(params[:id])
     @athlete.update_attributes(params[:athlete])
     @athlete.update_attributes(:tps => tp_cost(@athlete))
+    @athlete.update_attributes(:penalty_tps => tp_penalty(@athlete))
 #    @roster_items = current_user.roster.paginate(:page => params[:page])
     respond_to do |format|
       format.js

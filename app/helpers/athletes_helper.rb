@@ -27,7 +27,53 @@ module AthletesHelper
     end
 
     #Next is Athlete weight
-    @cost_tally
+	if athlete.weight == 2 
+	    @cost_tally += 5
+	elsif athlete.weight == 3
+		@cost_tally -= 5
+	end
+	
+	# then Athlete height
+	if athlete.height == 3 
+	    @cost_tally += 5
+	elsif athlete.height == 2
+		@cost_tally -= 5
+	end
+	
+	
+	# then Athlete age
+	if athlete.age == 3
+	    @cost_tally += 5
+	elsif athlete.age == 2
+		@cost_tally -= 5
+	end
+	
+	@cost_tally
   end
+  
+  def tp_penalty(athlete)
+   # Athlete weight
+   
+   	@penalty_tally = 0
+   
+	if athlete.weight == 3		
+		@penalty_tally += 5
+	end
+	
+	# then Athlete height
+	if athlete.height == 2
+		@penalty_tally += 5
+	end
+	
+	
+	# then Athlete age
+	if athlete.age == 2
+		@penalty_tally += 5
+	end
+	
+	@penalty_tally
+  end
+	
+  	
     
 end

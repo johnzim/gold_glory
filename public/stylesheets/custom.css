@@ -431,9 +431,54 @@ nav ul li {
 
 }
 
+#tp_total_board {
+	top: 0;
+	text-align: center;
+	margin-top: 20px;
+	color: white;
+	font-size: medium;
+	z-index: 2;
+	width: 175px;
+	height: 55px;
+
+
+}
+
+#refund_total_board {
+	text-align: left;
+	margin-left: 44px;
+	color: white;
+	font-size: medium;
+	z-index: 2;
+	width: 130px;
+	height: 55px;
+
+
+}
+
+
+#live_refund_tally {
+	margin-left: 22px;
+	
+}
+
+#live_refund_text {
+	margin-left: 12px;
+	
+}
+
+#refund_total_board p {
+
+	padding-right: 25px;
+}
 #tp_total_content p {
 
 	padding-top: 12px;
+}
+
+.penalty_tps {
+	text-align: center;
+//	color: #94bced;
 }
 
 .tp_overspent {
@@ -448,6 +493,16 @@ nav ul li {
 
 .tp_underspent{
 	background-image:url('/images/tp_left_pointer.png');
+
+}
+
+.refund_underspent{
+	background-image:url('/images/refund_pointer_green.png');
+
+}
+
+.refund_overspent{
+	background-image:url('/images/refund_pointer_red.png');
 
 }
 

@@ -23,24 +23,63 @@
 
 function calc_tp_cost() {
     var skill_value2 = $("#athlete_skill").val();
+	var weight_penalty = $('#athlete_weight').val();
+	var height_penalty = $('#athlete_height').val();
+	var age_penalty = $('#athlete_age').val();
+	var penalty_points = 0;
+	
+	
+	
+
+	
 
     if (skill_value2 == 1) {
-	skill_value2 = 20;
+		skill_value2 = 20;
     }
     else if (skill_value2 == 2) {
-	skill_value2 = 10;
+		skill_value2 = 10;
     }
     else {
-	skill_value2 = 50;
+		skill_value2 = 50;
     }
 
-    $('#tp_cost').html(""+skill_value2);
+
+    if (weight_penalty == 2) {
+		penalty_points = 5;
+    }
+    else if (weight_penalty == 3) {
+		penalty_points -=5;
+     }
+    
+    
+    if (height_penalty == 2) {
+    	penalty_points -=5;
+    }
+    else if (height_penalty == 3) {
+    	penalty_points +=5;
+    }
+    
+    if (age_penalty == 2) {
+    	penalty_points -=5;
+    }
+    else if (age_penalty == 3) {
+    	penalty_points +=5;
+    }
+    
+	var total_cost = skill_value2 + penalty_points;
+ 
+    $('#tp_cost').html(""+total_cost);
     
     tp_spent_total();
 
 }
 
 $('#athlete_skill').change(calc_tp_cost);
+$('#athlete_weight').change(calc_tp_cost);
+$('#athlete_height').change(calc_tp_cost);
+$('#athlete_age').change(calc_tp_cost);
+
+
 calc_tp_cost();
    </script>
 
