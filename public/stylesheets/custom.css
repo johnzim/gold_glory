@@ -419,7 +419,7 @@ nav ul li {
 
 
 #tp_total_content {
-	top: 0;
+	top: 0px;
 	text-align: center;
 	margin-top: 20px;
 	color: white;
@@ -434,7 +434,7 @@ nav ul li {
 #tp_total_board {
 	top: 0;
 	text-align: center;
-	margin-top: 20px;
+	margin-top: 0px;
 	color: white;
 	font-size: medium;
 	z-index: 2;
