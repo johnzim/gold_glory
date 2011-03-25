@@ -1,4 +1,18 @@
+@font-face{
+font-family: 'AdelleWeb_Regular';
+src: url( 'https://fnt.webink.com/wfs/?drawer=22F1692E-5DE1-47E3-9AFF-64DEB0D6EC81&font=37437296-19E9-5916-9448-2D4ADE086DC5');
+font-weight:normal;font-style:normal;font-variant:normal;
+}
+
+@font-face{
+font-family: 'Grueber_Bold';
+src: url( 'https://fnt.webink.com/wfs/?drawer=22F1692E-5DE1-47E3-9AFF-64DEB0D6EC81&font=31442123-2E0C-F066-BDE1-4B17FE4D177B');
+font-weight:normal;font-style:normal;font-variant:normal;
+}
+
+
 body{
+	font-family: AdelleWeb_Regular;
 	background-image:url('/images/8bitbg.png');
 	background-repeat: repeat-x;
 	background-color: #009000;
@@ -56,7 +70,7 @@ body{
 }
 
 #tab_bar_container {
-	background-color: #efc100;
+//	background-color: #efc100;
 	width: 500px;
 	position: relative;
 	left: 20px;
@@ -374,11 +388,26 @@ font-size: 16pt;
 }
 
 
-#tab_bar ul li {
-	padding: 5px;
-	list-style-type: none;
-	display:  inline-block;
+#tab_bar {
+	font-family: AdelleWeb_Regular;
 }
+
+#tab_bar ul li {
+	background-image:url('/images/menublockshort.png');
+	width:100px;
+	height:40px;
+	list-style-type: none;
+	padding-top: 10px;
+	text-align: center;
+	display:  inline-block;
+	
+}
+
+#tab_bar ul li a {
+	color: white;
+	text-decoration: none;
+}
+
 
 nav {
  	float: right;
