@@ -227,7 +227,9 @@ display: inline-block;
 	margin: 2px;
 	margin-bottom: 10px;
 	background-image:url('/images/roster_item_bg3.png');
-	color: white;		
+	color: white;	
+	display:  inline-block;
+		
 }
 
 .roster_stats ul {
