@@ -1,0 +1,7 @@
+$('.roster_stats').fadeIn('slow')
+$('.edit_panel').hide()
+$('.name_edit').hide()
+$('#<%= h("name_") + h(@athlete.id) %>').hide()
+$('#<%= h("stats_") + h(@athlete.id) %>').hide()
+$('#<%= h("name_") + h(@athlete.id) %>').html("<%= escape_javascript(render :partial => '/shared/athlete_name_edit') %>")
+$('#<%= h("name_") + h(@athlete.id) %>').fadeIn('slow')

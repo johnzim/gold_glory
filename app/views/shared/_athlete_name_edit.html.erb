@@ -1,0 +1,15 @@
+<div id="athlete_tp_block">
+  <div class="name_edit">
+    <%= form_for @athlete, :remote => true do |f| %>
+    <ul>
+      <li>Name         <br />
+	<%= f.text_field :first_name %> <%= f.text_field :name %><br />
+      </li>
+
+      <li>
+  <%= f.submit "Submit Changes" %>
+    </li>
+ </ul>
+</div>
+</div>
+<% end %>
