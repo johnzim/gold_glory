@@ -1,14 +1,34 @@
 
+<div id="next_event_container">
+  <h2>Next Event Goes Here</h2>
+</div>
+
+
+
+      
+
+<div id = "results_container">
+  <h2>Results Go Here</h2>
+</div>
+
+<div id = "tab_bar_container">
+  <%= render 'shared/tab_bar' %>
+</div>
+
 
 <div id = "content_container">
  <h1>All Athletes</h1>
 
 <%= will_paginate %>
-<ul class="spamfeed_item">
   <%= render @athletes %>
-</ul>
-
 <%= will_paginate %>
-
-  
+ 
 </div>
+
+<div id="spam_container">
+  <%= render '/shared/spamfeed' %>
+  
+  <%= render '/shared/spampost_form' %>
+</div>
+
+

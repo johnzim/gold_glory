@@ -14,23 +14,30 @@ GoldGlory::Application.routes.draw do
   match '/contact', :to => "pages#contact"
   match '/about', :to => "pages#about"
   match '/tpspend', :to => "pages#tpspend"
+  match '/admin_dashboard', :to => "pages#admin_dashboard"
   
 
   resources :users
 
   resources :sessions, :only => [:new, :create, :destroy]
+
   resources :spamposts do
     post :create
   end
+
   resources :athletes do
     member do
       get :name_edit
     end
   end
   
-  
+#  resources :gamestate do
+ #   member do
+  #    post :generate_athletes
+   # end
+  #end
 
-  
+  match '/generate', :to => 'gamestate#generate_athletes'
   match '/signup',  :to => 'users#new'
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'

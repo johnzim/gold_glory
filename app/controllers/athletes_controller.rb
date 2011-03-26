@@ -73,6 +73,11 @@ class AthletesController < ApplicationController
   def index
     @title = "All Athletes"
     @athletes = Athlete.paginate(:page => params[:page])
+
+
+    @spampost = Spampost.new
+    @spamfeed_items = Spampost.limit(5) 
+
   end
 
 end

@@ -1,0 +1,46 @@
+
+
+
+<div id="next_event_container">
+  <h2>Next Event Goes Here</h2>
+</div>
+
+      
+
+      <div id = "results_container">
+	<h2>Results Go Here</h2>
+      </div>
+      
+      <div id = "tab_bar_container">
+	<%= render 'shared/tab_bar' %>
+      </div>
+
+<div id = "content_container">
+
+<div class="left_content">
+ <h1>All users</h1>
+
+<%= will_paginate @users %>
+<ul class="users">
+  <%= render @users %>
+</ul>
+</div>
+<div class="right_content">
+  <div class="admin_right_content">
+    <p>Stuff here</p>
+    <%= link_to 'Generate Stats', :controller => 'gamestate', :action => 'generate_athletes' %>
+<br/>
+    <%= link_to 'View Athletes', athletes_path %>
+
+  </div>
+</div>
+  
+</div>
+
+<div id="spam_container">
+  <%= render '/shared/spamfeed' %>
+  
+  <%= render '/shared/spampost_form' %>
+</div>
+
+

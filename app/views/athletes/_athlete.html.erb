@@ -1,12 +1,84 @@
-<ul>
+<div class = "roster_item">
+<div id=<%= h("pic_") + athlete.id %> class="roster_icon">
+<% if athlete.gender == "Male" %>
+  			<img id="athlete_portrait" src='/images/male_ath_icon.png'>
+  		<% else %>
+  			<img id="athlete_portrait" src='/images/female_ath_icon.png'>
+		<% end %>
+	</div>
+	
+	<div id=<%= h("stats_") + h(athlete.id) %> class="roster_stats">
+  <ul>
+    <li>
+     <%= athlete.first_name %> <%= athlete.name %>
 
- <li>UserId: <%= athlete.user_id %></li>  
- <li>Age: <%= athlete.age %></li>
-  <li>Gender: <%= athlete.gender %></li>
-  <li>Height: <%= athlete.height %></li>  
-  <li>Weight: <%= athlete.weight %></li>
-  <li>Skill: <%= athlete.skill %></li>  
-  <li>Power: <%= athlete.power %></li>
-  <li>Speed: <%= athlete.speed %></li>
 
-</ul>
+	  
+<br/>Gender: <%= athlete.gender =%>
+       <br />
+    Age: 
+     <% if athlete.age == 1 %>
+     Normal
+
+     <% elsif athlete.age == 2 %>
+     Old
+     <% else %>
+     Young 
+     <% end %>
+
+ </li>
+     <li>
+ Weight:     
+     <% if athlete.weight == 1 %>
+     Normal
+
+     <% elsif athlete.weight == 2 %>
+     Light
+     <% else %>
+     Heavy
+     <% end %>
+<br />
+ Height:     
+     <% if athlete.height == 1 %>
+     Normal
+
+     <% elsif athlete.height == 2 %>
+     Short
+     <% else %>
+     Tall
+     <% end %>
+<br />
+   Skill:    
+     <% if athlete.skill == 1 %>
+     <span id="silver_text">Amateur</span>
+     
+     <% elsif athlete.skill == 2 %>
+     <span id="bronze_text">Scrub</span>
+     <% else %>
+     <span id="gold_text">Prodigy</span>
+     <% end %>
+</li>
+
+<% if signed_in? %>
+<% if admin? %>
+ 
+<li>
+  Power: <%= athlete.power %> <br />
+  Speed: <%= athlete.speed %> <br />
+  Endurance: <%= athlete.endurance %></li>
+
+<li>
+  Reflex: <%= athlete.reflex %> <br />
+  Technique: <%= athlete.technique %> <br />
+  Menality: <%= athlete.mentality %></li>
+
+<li>
+  User: <%= athlete.user_id %> <br />
+
+
+
+<% end %>
+<% end %>
+  </ul>
+  </div>
+</div>
