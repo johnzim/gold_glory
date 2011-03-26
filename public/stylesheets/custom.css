@@ -54,6 +54,7 @@ body{
 }
 
 #next_event_container {
+	font-family: Grueber_Bold;
 	position:  relative;
 	left:  80px;
 	top: 60px;
@@ -69,13 +70,9 @@ body{
 	
 }
 
-#tab_bar_container {
-//	background-color: #efc100;
-	width: 500px;
-	position: relative;
-	left: 20px;
-	top:  20px;
-	height: 40px;
+#next_event_container h2 {
+	color:  white;
+	
 }
 
 
@@ -388,24 +385,35 @@ font-size: 16pt;
 	color: #ffdd06;	
 }
 
+#tab_bar_container {
+//	background-color: #efc100;
+	width: 500px;
+	position: relative;
+	left: 20px;
+	top:  40px;
+	height: 60px;
+}
 
 #tab_bar {
+	height: 250px;
 	font-family: Grueber_Bold;
 	font-size: 11pt;
 }
 
-#tab_bar ul li {
+.tab_button {
+	position: relative;
+	top: 5px;
 	background-image:url('/images/menublockshort.png');
 	width:100px;
-	height:40px;
+	height:35px;
 	list-style-type: none;
-	padding-top: 10px;
+	padding-top: 5px;
 	text-align: center;
 	display:  inline-block;
 	
 }
 
-#tab_bar ul li a {
+.tab_button a {
 	color: white;
 	text-decoration: none;
 }
@@ -504,7 +512,7 @@ nav ul li {
 }
 #tp_total_content p {
 
-	padding-top: 12px;
+	padding-top: 15px;
 }
 
 .penalty_tps {
