@@ -31,6 +31,17 @@ class AthletesController < ApplicationController
     end
   end
 
+  def name_edit
+    @roster_items = current_user.roster.paginate(:page => params[:page])
+
+    @edathlete = Athlete.find(params[:id])
+    @athlete = Athlete.find(params[:id])
+    @tp_cost = tp_cost(@athlete)
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def update
     @athlete = Athlete.find(params[:id])
     @athlete.update_attributes(params[:athlete])
@@ -42,6 +53,8 @@ class AthletesController < ApplicationController
     end
   end
  
+
+
  def show
     @title = "View Athlete"
     @athlete = Athlete.find(params[:id])

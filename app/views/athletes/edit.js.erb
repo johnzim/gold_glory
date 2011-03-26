@@ -1,5 +1,6 @@
 $('.roster_stats').fadeIn('slow')
 $('.edit_panel').hide()
+$('.name_edit').hide()
 $('#<%= h("stats_") + h(@athlete.id) %>').hide()
 $('#<%= h("edit_") + h(@athlete.id) %>').html("<%= escape_javascript(render :partial => '/shared/athlete_tp_edit') %>")
 $('#<%= h("edit_") + h(@athlete.id) %>').fadeIn('slow')

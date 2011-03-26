@@ -3,7 +3,7 @@ $(document).ready(function() {
 	tp_spent_total();
 
   $(<%= h("edit_") + h(roster_item.id) %>).hide();
-});
+  $(<%= h("name_") + h(roster_item.id) %>).hide();});
 </script>
 
 <div id=<%= roster_item.id %> class = "roster_item">

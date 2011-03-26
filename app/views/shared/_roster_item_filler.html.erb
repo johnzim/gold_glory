@@ -9,7 +9,19 @@
 	
 	<div id=<%= h("stats_") + h(roster_item.id) %> class="roster_stats">
   <ul>
-  	<li><%= roster_item.name %><br/>Gender: <%= roster_item.gender =%>
+    <li>
+      <% if creation_mode? %>
+      
+      <%= link_to h(roster_item.first_name), name_edit_athlete_path(roster_item.id), :remote => true, :class =>"tp_link" %> <span class="underlined"></span>     <%= link_to h(roster_item.name), name_edit_athlete_path(roster_item.id), :remote => true, :class =>"tp_link" %>
+
+      
+      <% else %>
+      <%= roster_item.name %>
+
+      <% end %>
+
+	  
+<br/>Gender: <%= roster_item.gender =%>
        <br />
     Age: 
      <% if roster_item.age == 1 %>
@@ -68,4 +80,5 @@
   </div>
 
 <div id=<%= h("edit_") + h(roster_item.id) %> class="edit_panel"></div>
+<div id=<%= h("name_") + h(roster_item.id) %> class="name_edit_panel"></div>
 

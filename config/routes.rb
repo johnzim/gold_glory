@@ -22,7 +22,12 @@ GoldGlory::Application.routes.draw do
   resources :spamposts do
     post :create
   end
-  resources :athletes
+  resources :athletes do
+    member do
+      get :name_edit
+    end
+  end
+  
   
 
   

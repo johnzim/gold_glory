@@ -1,8 +1,8 @@
 module AthletesHelper
 
   def seed_roster(user)
-    @attr_male = {:name => "John Smith", :age => 1, :height => 1, :gender => "Male", :weight =>1, :skill => 1, :tps => 20}
-    @attr_female = {:name => "Jane Doe",:age => 1, :height => 1, :gender => "Female", :weight =>1, :skill => 1, :tps => 20}
+    @attr_male = {:first_name => "John", :name => "Smith", :age => 1, :height => 1, :gender => "Male", :weight =>1, :skill => 1, :tps => 20}
+    @attr_female = {:first_name => "Jane", :name => "Doe",:age => 1, :height => 1, :gender => "Female", :weight =>1, :skill => 1, :tps => 20}
     
     10.times do
       @athlete = user.athletes.build(@attr_male)
