@@ -618,9 +618,11 @@ nav ul li {
 /* Sign In Box */
 
 #sign_in_page_container {
-	
+	font-family: AdelleWeb_Regular;
+		
 	height: 700px;
 }
+
 
 #sign_in_container {
 	position:relative;
@@ -635,6 +637,12 @@ nav ul li {
 	border-radius: 35px;
 
 
+}
+
+#sign_in_container h1 {
+	
+	font-family: Greuber_Bold;
+	
 }
 
 #sign_in_content {
@@ -654,4 +662,8 @@ nav ul li {
 #sign_in_content li {
 	list-style: none;
 
+}
+
+.descriptive {
+	text-align: center;
 }
