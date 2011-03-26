@@ -554,6 +554,11 @@ nav ul li {
 
 /* Sign In Box */
 
+#sign_in_page_container {
+	
+	height: 700px;
+}
+
 #sign_in_container {
 	position:relative;
 	background-color: rgba(255,255,255,0.6);
