@@ -12,6 +12,8 @@ font-weight:normal;font-style:normal;font-variant:normal;
 
 
 body{
+	margin-top: -15px;
+
 	font-family: AdelleWeb_Regular;
 	background-image:url('/images/8bitbg.png');
 	background-repeat: repeat-x;
@@ -49,20 +51,17 @@ body{
 
 #logo_image {
 	position:  relative;
-	padding: 10px;
+	padding: 20px;
 	float: left;
 }
 
 #next_event_container {
-	font-family: Grueber_Bold;
 	position:  relative;
 	left:  80px;
 	top: 60px;
-	padding: 15px;
 	background-color: red;
 /*	background-image:url('/images/nexteventbg2.png');*/
 	float: left;
-	height: 70px;
 	width:  370px;
 	-moz-box-shadow: 4px 4px 15px #000000;
 	-webkit-box-shadow: 4px 4px 15px #000000;
@@ -70,8 +69,38 @@ body{
 	
 }
 
-#next_event_container h2 {
+
+
+.next_event_icon {
+	float: left;
+	padding: 15px;
+	padding-bottom: 12px;
+}
+
+
+.next_event	{
+	color: white;
+float: right;
+	padding-top: 0px;
+//	height:30px;
+	padding-right: 10px;
+}
+
+.next_event ul li {
+	list-style: none;
+	//padding-right: 20px;
+
+}
+
+.next_event ul li a {
+}
+
+}
+
+#next_event {
+	font-size: 3pt;
 	color:  white;
+	font-family: Grueber_Bold;
 	
 }
 
@@ -233,7 +262,8 @@ display: inline-block;
 }
 
 .roster_stats ul {
-	padding-top: 20px;
+font-size: 11pt;
+	padding-top: 5px;
 	height:30px;
 }
 
@@ -320,6 +350,7 @@ display: inline-block;
 
 #spamfeed ul {
 	margin: 2px;
+	padding: 5px;
 }
 
 #spamfeed_item {
@@ -342,8 +373,8 @@ display: inline-block;
 }
 
 #spampost_content{
-	margin-left: 5px;
-	width:  180px;
+	margin-left: 0px;
+	width:  194px;
 	height: 50px;
 }
 
@@ -472,7 +503,7 @@ font-size: 16pt;
 	width:100px;
 	height:35px;
 	list-style-type: none;
-	padding-top: 5px;
+	padding-top: 10px;
 	text-align: center;
 	display:  inline-block;
 	
@@ -486,15 +517,16 @@ font-size: 16pt;
 
 nav {
 	font-family: AdelleWeb_Regular;
+	font-size: 10pt;
  	float: right;
 }
 
 nav a {
+	size: 6px;
 	color: white;
 }
 
 nav {
-  padding: 0 0.7em;
   white-space: nowrap;
 }
 
@@ -518,13 +550,14 @@ nav ul li {
 	margin-right: 235px;
 	width: 165px;
 	height: 55px;
-	top: 270px;
+	top: 313px;
+//	margin-top: 15px;
 	margin-left: 40px;
 }
 
 
 #tp_total_content {
-	top: 0px;
+	top: -15px;
 	text-align: center;
 	margin-top: 20px;
 	color: white;
@@ -550,6 +583,7 @@ nav ul li {
 }
 
 #refund_total_board {
+	margin-top: -10px;
 	text-align: left;
 	margin-left: 44px;
 	color: white;
