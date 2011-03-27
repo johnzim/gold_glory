@@ -80,12 +80,17 @@ body{
 
 .next_event	{
 	color: white;
-float: right;
-	padding-top: 0px;
+	float: left;
+	padding-top: -10px;
+	padding-left: 0px;
 //	height:30px;
-	padding-right: 10px;
+	width: 250px;
 }
 
+.next_event ul {
+	
+	
+}
 .next_event ul li {
 	list-style: none;
 	//padding-right: 20px;
@@ -97,13 +102,20 @@ float: right;
 
 }
 
-#next_event {
-	font-size: 3pt;
+.next_event {
+	float: right;
 	color:  white;
-	font-family: Grueber_Bold;
-	
 }
 
+.next_event p {
+	font-family: AdelleWeb_Regular;
+	font-size: 12pt;
+}
+
+.next_event h2 {
+	font-size: 15pt;
+	font-family: Grueber_Bold;
+}
 
 #content_container {
 	-moz-box-shadow: 4px 4px 15px #000000;
@@ -210,7 +222,9 @@ width: 50%;
 }
 
 
-
+ul {
+	
+}
 
 #athlete_tp_block {
 	margin: 5px;
