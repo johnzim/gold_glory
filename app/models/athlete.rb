@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110326164930
+# Schema version: 20110327120450
 #
 # Table name: athletes
 #
@@ -22,6 +22,7 @@
 #  tps         :integer
 #  penalty_tps :integer
 #  first_name  :string(255)
+#  iconno      :integer
 #
 
 class Athlete < ActiveRecord::Base

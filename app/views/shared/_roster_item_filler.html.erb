@@ -1,9 +1,12 @@
 
 	<div id=<%= h("pic_") + roster_item.id %> class="roster_icon">
 		<% if roster_item.gender == "Male" %>
-  			<img id="athlete_portrait" src='images/male_ath_icon.png'>
+  			<img id="athlete_portrait"
+		src=<%=h("/images/athletes/male/") + h(roster_item.iconno) + h(".png") %>>
+
   		<% else %>
-  			<img id="athlete_portrait" src='images/female_ath_icon.png'>
+<img id="athlete_portrait"
+		src=<%=h("/images/athletes/female/") + h(roster_item.iconno) + h(".png") %>>
 		<% end %>
 	</div>
 	

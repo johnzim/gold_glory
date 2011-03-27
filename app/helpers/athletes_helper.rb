@@ -6,11 +6,17 @@ module AthletesHelper
     
     10.times do
       @athlete = user.athletes.build(@attr_male)
+      @rand = (1+ rand(89))
+
+      @athlete.iconno = @rand
       @athlete.save
     end
     
     10.times do
       @athlete = user.athletes.build(@attr_female)
+      @rand = (1+ rand(89))
+
+      @athlete.iconno = @rand
       @athlete.save
     end
   end

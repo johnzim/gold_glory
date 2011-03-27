@@ -670,3 +670,7 @@ nav ul li {
 .descriptive {
 	text-align: center;
 }
+
+.huge {
+	font-size: 24px;
+}

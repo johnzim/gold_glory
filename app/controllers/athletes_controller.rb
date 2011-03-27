@@ -5,10 +5,7 @@ class AthletesController < ApplicationController
   def create
     @athlete = current_user.athletes.build(params[:athlete])
 
-    @rand = (1+ rand(9))
 
-    @athlete.speed = @athlete.height
-    @athlete.power = @rand
     @athlete.save
     @roster_items = current_user.roster.paginate(:page => params[:page])
 
