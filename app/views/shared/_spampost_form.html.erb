@@ -1,10 +1,10 @@
 <div id="spam_field">
-<%= form_for @spampost, :remote => true do |f| %>
+  <%= form_for @spampost, :remote => true do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
   <div id="field">
     <%= f.text_area :content %>
   </div>
- <div id="submit_button">
+  <div id="submit_button">
     <%= f.submit "Submit" %>
   </div>
 <% end %>

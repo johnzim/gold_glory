@@ -12,23 +12,25 @@ font-weight:normal;font-style:normal;font-variant:normal;
 
 
 body{
-	margin-top: -15px;
-
 	font-family: AdelleWeb_Regular;
 	background-image:url('/images/8bitbg.png');
 	background-repeat: repeat-x;
 	background-color: #009000;
 	min-height: 100%;
-
+	margin: 0px;
+	
 }
 
 
 #page_container {
 /*	background-color: #dddddd;*/
 	width: 900px;
+	float: none;
 	margin-left: auto;
 	margin-right: auto;
-	margin: 0 auto -60px;
+	position: relative;
+	padding-botton:400px;
+//	margin: 0 auto -60px;
 	
 
 
@@ -40,11 +42,12 @@ body{
 	clear: both;
 	font-size: x-small;
 	text-align: center;
- 	position: relative;
- 	z-index: 10;
- 	bottom: -45px;
+ 	position: absolute;
+ 	z-index: 200;
 	height: 4em;
+	width: 100%;
 	margin-top: -12em;
+	float: none;
 }
 
 
@@ -317,6 +320,19 @@ font-size: 11pt;
 	
 }
 
+#upper_block{
+	width: 900px;
+	float: right;
+}
+#lower_block {
+	position: absolute;
+	top: 200px;
+	float: left;
+	width: 900px;
+	height: 100%;
+	
+}
+
 #spam_container {
 	background-color: #f0e7c4;
 	width: 200px;
@@ -335,7 +351,7 @@ font-size: 11pt;
 	background-color: #f0e7c4;
 	width: 280px;
 	height: 200px;
-	margin-left: auto;
+	float: right;
 	position: relative;
 	top: 25px;
 	-moz-box-shadow: 4px 4px 15px #000000;
@@ -564,7 +580,7 @@ nav ul li {
 	margin-right: 235px;
 	width: 165px;
 	height: 55px;
-	top: 313px;
+	top: 185px;
 //	margin-top: 15px;
 	margin-left: 40px;
 }
