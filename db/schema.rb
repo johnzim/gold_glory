@@ -36,11 +36,6 @@ ActiveRecord::Schema.define(:version => 20110327120450) do
 
   add_index "athletes", ["user_id"], :name => "index_athletes_on_user_id"
 
-  create_table "spamboxes", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "spamposts", :force => true do |t|
     t.string   "content"
     t.string   "user_id"
@@ -62,5 +57,7 @@ ActiveRecord::Schema.define(:version => 20110327120450) do
     t.boolean  "admin"
     t.integer  "tp_total"
   end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
 end
