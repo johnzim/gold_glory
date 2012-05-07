@@ -23,6 +23,7 @@
 #  penalty_tps :integer
 #  first_name  :string(255)
 #  iconno      :integer
+#  true_height :integer
 #
 
 class Athlete < ActiveRecord::Base

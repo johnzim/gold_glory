@@ -19,6 +19,8 @@
 <br/>Gender: <%= athlete.gender =%>
        <br />
     Age: 
+        <% if creation_mode? %>
+
      <% if athlete.age == 1 %>
      Normal
 
@@ -28,9 +30,15 @@
      Young 
      <% end %>
 
+		<% else %>
+	
+	<%= athlete.true_age %>
+	<% end %>
  </li>
      <li>
  Weight:     
+     <% if creation_mode? %>
+
      <% if athlete.weight == 1 %>
      Normal
 
@@ -39,16 +47,26 @@
      <% else %>
      Heavy
      <% end %>
-<br />
- Height:     
-     <% if athlete.height == 1 %>
-     Normal
-
-     <% elsif athlete.height == 2 %>
-     Short
+     
      <% else %>
-     Tall
+     <%= athlete.true_weight %> kg
      <% end %>
+<br />
+ 	Height:     
+    <% if creation_mode? %>
+     	<% if athlete.height == 1 %>
+     		Normal
+
+     	<% elsif athlete.height == 2 %>
+     		Short
+     	<% else %>
+     		Tall
+     	<% end %>
+     <% else %>
+     	<%= athlete.true_height %> cm
+     <% end %>
+     
+
 <br />
    Skill:    
      <% if athlete.skill == 1 %>

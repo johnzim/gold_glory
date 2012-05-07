@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110327120450) do
+ActiveRecord::Schema.define(:version => 20120507174502) do
 
   create_table "athletes", :force => true do |t|
     t.integer  "user_id"
@@ -32,6 +32,9 @@ ActiveRecord::Schema.define(:version => 20110327120450) do
     t.integer  "penalty_tps"
     t.string   "first_name"
     t.integer  "iconno"
+    t.integer  "true_height"
+    t.integer  "true_weight"
+    t.integer  "true_age"
   end
 
   add_index "athletes", ["user_id"], :name => "index_athletes_on_user_id"
