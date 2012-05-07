@@ -15,16 +15,20 @@
 </div>
 
 <div id="spam_container">
+  <% if signed_in? %>
+
   <%= render '/shared/spamfeed' %>
   
   <%= render '/shared/spampost_form' %>
+  <% end %>
+
 </div>
 
 <div id = "content_container">
-  <% if signed_in? %>
   
   <h1>Welcome to Gold and Glory</h1> 
-  
+    <% if signed_in? %>
+
   <% if creation_mode? %>
   <h2>Creation Mode Active!</h2>
   <% end %>
