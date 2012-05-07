@@ -31,7 +31,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     @user.creation_mode = true
     if @user.save
-      flash[:success] = "Welcome to the Gold and Glory!"
+      flash[:success] = "**** Welcome to the Gold and Glory!"
       sign_in @user
       redirect_to root_path
       seed_roster @user

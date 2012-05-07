@@ -453,10 +453,10 @@ font-size: 16pt;
 	font-size: 14pt;
 	width: 400px;
 	height: 50px;
-	z-index: 20;
+	z-index: 99;
 	padding: 10px;
 	position: relative;
-	top: 30px;
+	top: 5px;
 	left: 50px;
 	box-shadow: 4px 4px 15px #000000;
 	-moz-box-shadow: 4px 4px 15px #000000;
@@ -520,7 +520,7 @@ font-size: 16pt;
 
 #tab_bar_container {
 //	background-color: #efc100;
-	width: 500px;
+	width: 600px;
 	position: relative;
 	left: 20px;
 	top:  40px;
