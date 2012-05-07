@@ -155,6 +155,13 @@ width: 50%;
 	font-family: AdelleWeb_regular;
 }
 
+
+
+.admin_athlete_view {
+	padding-right: -10px;
+	font-size: 10pt;
+}
+
 #athlete_creator_container {
 	background-color: #7766df;
 	width: 600px; 
@@ -580,7 +587,7 @@ nav ul li {
 	margin-right: 235px;
 	width: 165px;
 	height: 55px;
-	top: 185px;
+	top: 111px;
 //	margin-top: 15px;
 	margin-left: 40px;
 }
@@ -598,6 +605,8 @@ nav ul li {
 
 
 }
+
+
 
 #tp_total_board {
 	top: 0;
@@ -642,12 +651,16 @@ nav ul li {
 }
 #tp_total_content p {
 
-	padding-top: 15px;
+	padding-top: 17px;
 }
 
 .penalty_tps {
 	text-align: center;
 //	color: #94bced;
+}
+
+.fat_white {
+	padding-top: 
 }
 
 .tp_overspent {
