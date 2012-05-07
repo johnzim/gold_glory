@@ -32,7 +32,11 @@
     <p>Stuff here</p>
     <%= link_to 'Generate Stats', :controller => 'gamestate', :action => 'generate_athletes' %>
 <br/>
-    <%= link_to 'View Athletes', athletes_path %>
+    <%= link_to 'View Athletes', athletes_path %><br>
+    <%= link_to 'Activate Creation Mode', :controller => 'gamestate', :action => 'activate_creation' %><br>
+    <%= link_to 'Dectivate Creation Mode', :controller => 'gamestate', :action => 'deactivate_creation' %>
+
+
 
   </div>
 </div>

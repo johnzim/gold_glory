@@ -17,6 +17,30 @@ class GamestateController < ApplicationController
 
   end
   
+  def activate_creation
   
+  	@users = User.all
+  
+  	@users.each do |user|
+ 	  user.update_attribute(:creation_mode, true)
+  	end
+  
+    flash[:success] = "*** Creation Mode Activated Successfully"
+    redirect_to :controller => :pages, :action => "admin_dashboard"
+
+	end
+	
+	def deactivate_creation
+  
+  	@users = User.all
+  
+  	@users.each do |user|
+ 	  user.update_attribute(:creation_mode, false)
+  	end
+  
+    flash[:success] = "*** Creation Mode Deactivated Successfully"
+    redirect_to :controller => :pages, :action => "admin_dashboard"
+
+	end
 
 end
