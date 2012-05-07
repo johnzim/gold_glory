@@ -11,7 +11,11 @@
 <div id ="lower_block">
 
 <div id ="tab_bar_container">
+   <% if signed_in? %>
+
   <%= render 'shared/tab_bar' %>
+	  <% end %>
+
 </div>
 
 <div id="spam_container">
@@ -20,15 +24,15 @@
   <%= render '/shared/spamfeed' %>
   
   <%= render '/shared/spampost_form' %>
-  <% end %>
+    <% end %>
 
 </div>
 
 <div id = "content_container">
+  <% if signed_in? %>
   
   <h1>Welcome to Gold and Glory</h1> 
-    <% if signed_in? %>
-
+  
   <% if creation_mode? %>
   <h2>Creation Mode Active!</h2>
   <% end %>
@@ -51,7 +55,11 @@
     <img src="/images/logo.jpg">
   </div>
   
-  <span class="huge descriptive"><%= link_to "Sign Up", users_new_path %></span>
+  <span class="huge descriptive"><p><%= link_to "Sign Up", users_new_path %></p>
+    <p>or</p>
+    <p><%= link_to "Sign In", signin_path %></p></span>
+
+
   <% end %>
   
 </div>

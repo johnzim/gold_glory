@@ -735,6 +735,12 @@ nav ul li {
 	background-color: white;
 }
 
+#sign_in_content ul {
+
+	padding-left: 10px;
+
+}
+
 #sign_in_content h1 {
 	text-align: center;
 }
@@ -742,6 +748,10 @@ nav ul li {
 #sign_in_content li {
 	list-style: none;
 
+}
+
+.sign_up_form {
+	padding-left: 15px;
 }
 
 .descriptive {
