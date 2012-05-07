@@ -32,7 +32,8 @@
       </script>
       <%= link_to "Home", root_path %>
     </div>
-    
+   <% if admin? %>
+  <li><%= link_to "Admin", '/admin_dashboard' %></li>  
     <div class="tab_button" id="tab_button8">
       <script>
 	$('#tab_button8').mouseenter(function() {
@@ -44,8 +45,7 @@
 	$(this).animate({top:'5px', height:'30px'},"fast");
 	});
       </script>
-  <% if admin? %>
-  <li><%= link_to "Admin", '/admin_dashboard' %></li>
+ 
   <% end %>
     </div>
     
