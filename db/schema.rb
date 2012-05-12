@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120507195043) do
+ActiveRecord::Schema.define(:version => 20120512100322) do
 
   create_table "athletes", :force => true do |t|
     t.integer  "user_id"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(:version => 20120507195043) do
     t.boolean  "creation_mode"
     t.boolean  "admin"
     t.integer  "tp_total"
+    t.boolean  "help_tips"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

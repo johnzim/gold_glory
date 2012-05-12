@@ -29,7 +29,7 @@
 
 <div id = "content_container">
   
-  <div class="junior_coach_container">
+  <div id="junior_coach_container">
 	<p id="junior_coach_title">Hire a Junior Coach</p>
 	<%= form_for @coach, :remote => true do |f| %>
 	<span class="roster_stats"><ul><li>Name:  <br /><%= f.text_field :name %></li>
@@ -37,15 +37,13 @@
 	 <li>Event:  <br /> <%= select(:coach, :event, [['Athletics - Field', 'Athletics - Field'], ['Athletics - Track', 'Athletics - Track'], ['Swimming', 'Swimming'], ['Shooting', 'Shooting'], ['Weightlifting', 'Weightlifting'], ['Judo', 'Judo'], ['Rowing', 'Rowing'], ['Cycling', 'Cycling'], ['Gymnastics', 'Gymnastics'], ['Boxing', 'Boxing'], ['Equestrian', 'Equestrian'], ['Diving', 'Diving'], ['Canoeing', 'Canoeing'], ['Taekwondo', 'Taekwondo'], ['Fencing', 'Fencing'], ['Sailing', 'Sailing']], {:selected => @coach.event}) %></li>
 	  <li>Level:  <br /> 
      <%= select(:coach, :level, [['1', 1], ['2', 2], ['3', 3]], {:selected => @coach.level}) %></li>
-     <li>Cost: <br /> <span id="cash_cost"></span></li>
+     <li>Cost: <br /> <span id="cash_cost">5</span></li>
 	<li><%= f.submit "Purchase" %>
 </li>
 
 	</ul>
 	</span>
 	<% end %>
-		<button id="testbutton">OK</button>
-
 </div>
 
 </div>
@@ -91,6 +89,17 @@ function testr_hide() {
 }
 
 $('#coach_level').change(calc_cash_cost);
+
+function para_coach() {
+ $("#testr").animate({"top":-64, "opacity": 1}, 0, function() { 
+  $("#testr").animate({"top": "+=270px"}, 1300, function(){
+  	$("#testr").animate({"opacity": 0}, 100, function() {
+  		$("#testr").animate({"top":-64, "opacity": 1}, 0) }) })
+  	});
+
+  }
+
+
 
 $("#testbutton").click(function(){
 

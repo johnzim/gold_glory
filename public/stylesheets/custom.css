@@ -322,9 +322,8 @@ font-size: 11pt;
 	
 }
 
-#content_container p {
+.welcome_text {
 	padding: 10px;
-	
 }
 
 #upper_block{
@@ -764,14 +763,20 @@ nav ul li {
 
 
 
-.junior_coach_container{
+#junior_coach_container{
 	font-size: 10pt;
 	height: 100px;	
 	margin: 2px;
     padding-bottom: 10px;
 	margin-bottom: 20px;
-	/*background-image:url('/images/roster_item_bg3.png');*/
-	background-color: #30C906;
+background: #c2edc8; /* Old browsers */
+background: -moz-linear-gradient(top,  #c2edc8 0%, #41c641 11%, #5fce46 30%, #00c61d 69%, #007f1b 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c2edc8), color-stop(11%,#41c641), color-stop(30%,#5fce46), color-stop(69%,#00c61d), color-stop(100%,#007f1b)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #c2edc8 0%,#41c641 11%,#5fce46 30%,#00c61d 69%,#007f1b 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #c2edc8 0%,#41c641 11%,#5fce46 30%,#00c61d 69%,#007f1b 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #c2edc8 0%,#41c641 11%,#5fce46 30%,#00c61d 69%,#007f1b 100%); /* IE10+ */
+background: linear-gradient(top,  #c2edc8 0%,#41c641 11%,#5fce46 30%,#00c61d 69%,#007f1b 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c2edc8', endColorstr='#007f1b',GradientType=0 ); /* IE6-9 */
 	color: white;	
 	display: block;
 }
@@ -779,9 +784,9 @@ nav ul li {
 #junior_coach_title {
     font-size: 12pt;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 6px;
     margin-bottom: 0px;
-
+    padding-top: 17px;
 }
 
 
