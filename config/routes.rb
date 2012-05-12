@@ -3,6 +3,11 @@ GoldGlory::Application.routes.draw do
 
 
 
+  get "coaches/seed"
+
+  get "coaches/buy"
+   
+  
   get "users/new"
 
   get "pages/home"
@@ -15,6 +20,7 @@ GoldGlory::Application.routes.draw do
   match '/about', :to => "pages#about"
   match '/tpspend', :to => "pages#tpspend"
   match '/admin_dashboard', :to => "pages#admin_dashboard"
+  match '/marketplace', :to => "pages#marketplace"
   
 
   resources :users
@@ -25,8 +31,15 @@ GoldGlory::Application.routes.draw do
     post :create
   end
 
+  resources :coaches do
+  	member do
+  		get :name_edit
+  	end
+  end
+
   resources :athletes do
     member do
+      post :create
       get :name_edit
     end
   end

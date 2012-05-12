@@ -761,3 +761,35 @@ nav ul li {
 .huge {
 	font-size: 24px;
 }
+
+
+
+.junior_coach_container{
+	font-size: 10pt;
+	height: 100px;	
+	margin: 2px;
+    padding-bottom: 10px;
+	margin-bottom: 20px;
+	/*background-image:url('/images/roster_item_bg3.png');*/
+	background-color: #30C906;
+	color: white;	
+	display: block;
+}
+
+#junior_coach_title {
+    font-size: 12pt;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 0px;
+
+}
+
+
+#testr {
+position: absolute;
+height: 64px;
+left: 347px;
+top: -64px;
+width: 64px;
+z-index: 10;
+}

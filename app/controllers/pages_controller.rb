@@ -14,6 +14,20 @@ class PagesController < ApplicationController
     end
   end
 
+  def marketplace
+    @title = "Marketplace"
+    @user = current_user unless current_user.nil?
+    if signed_in?
+   
+  
+	@coach = current_user.coaches.new
+	
+      @spampost = Spampost.new
+      @spamfeed_items = Spampost.limit(5) 
+    end
+  end
+
+
   def tpspend
     @title = "Spend Talent Points"
     @athlete = Athlete.new

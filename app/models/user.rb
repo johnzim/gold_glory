@@ -35,6 +35,7 @@ class User < ActiveRecord::Base
 
   has_many :spamposts
   has_many :athletes
+  has_many :coaches
   before_save :encrypt_password
   include AthletesHelper
 

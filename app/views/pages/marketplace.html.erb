@@ -1,0 +1,108 @@
+<div id="upper_block">
+<div id="next_event_container">
+  <%= render 'shared/next_event' %>
+</div>
+<div id="testr"><img src="/images/coaches/male/1.png"></div>
+
+<% if signed_in? %>
+
+
+<div id ="results_container">
+  <h2>Results Go Here</h2>
+</div>
+
+<div id ="lower_block">
+
+<div id ="tab_bar_container">
+
+  <%= render 'shared/tab_bar' %>
+
+</div>
+
+<div id="spam_container">
+
+  <%= render '/shared/spamfeed' %>
+  
+  <%= render '/shared/spampost_form' %>
+
+</div>
+
+<div id = "content_container">
+  
+  <div class="junior_coach_container">
+	<p id="junior_coach_title">Hire a Junior Coach</p>
+	<%= form_for @coach, :remote => true do |f| %>
+	<span class="roster_stats"><ul><li>Name:  <br /><%= f.text_field :name %></li>
+	 
+	 <li>Event:  <br /> <%= select(:coach, :event, [['Athletics - Field', 'Athletics - Field'], ['Athletics - Track', 'Athletics - Track'], ['Swimming', 'Swimming'], ['Shooting', 'Shooting'], ['Weightlifting', 'Weightlifting'], ['Judo', 'Judo'], ['Rowing', 'Rowing'], ['Cycling', 'Cycling'], ['Gymnastics', 'Gymnastics'], ['Boxing', 'Boxing'], ['Equestrian', 'Equestrian'], ['Diving', 'Diving'], ['Canoeing', 'Canoeing'], ['Taekwondo', 'Taekwondo'], ['Fencing', 'Fencing'], ['Sailing', 'Sailing']], {:selected => @coach.event}) %></li>
+	  <li>Level:  <br /> 
+     <%= select(:coach, :level, [['1', 1], ['2', 2], ['3', 3]], {:selected => @coach.level}) %></li>
+     <li>Cost: <br /> <span id="cash_cost"></span></li>
+	<li><%= f.submit "Purchase" %>
+</li>
+
+	</ul>
+	</span>
+	<% end %>
+		<button id="testbutton">OK</button>
+
+</div>
+
+</div>
+
+
+<% else %>
+<div>
+  <h1>Gold and Glory is under development</h1>
+  <div id ="logo_image">
+    <img src="/images/logo.jpg">
+  </div>
+  
+  <span class="huge descriptive"><p><%= link_to "Sign Up", users_new_path %></p>
+    <p>or</p>
+    <p><%= link_to "Sign In", signin_path %></p></span>
+
+
+ <% end %>
+  
+</div>
+</div>
+
+
+
+<script>
+
+function calc_cash_cost() {
+
+    var level_value = $("#coach_level").val();
+	
+	var total_cost = level_value * 5
+    
+    
+     $('#cash_cost').html(""+total_cost);
+
+}
+
+
+function testr_hide() {
+
+	$("#testr").animate({"top": "+=300px"}, 1500);
+
+}
+
+$('#coach_level').change(calc_cash_cost);
+
+$("#testbutton").click(function(){
+
+  $("#testr").animate({"top": "+=270px"}, 1300, function(){
+  	$("#testr").animate({"opacity": 0}, 100);
+
+  }
+  );
+
+  
+});
+
+
+
+</script>

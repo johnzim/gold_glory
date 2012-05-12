@@ -46,6 +46,19 @@
       <%= link_to "Training", root_path %>
     </div>
     
+    <div class="tab_button" id="tab_button6">
+      <script>
+	$('#tab_button6').mouseenter(function() {
+	
+	$(this).animate({top:'2px', height:'33px'},"fast");
+	});
+	
+	$('#tab_button6').mouseleave(function() {
+	$(this).animate({top:'5px', height:'30px'},"fast");
+	});
+      </script>
+      <%= link_to "Staff", root_path %>
+    </div>    
     
     <div class="tab_button" id="tab_button4">
       <script>
@@ -58,7 +71,7 @@
 	$(this).animate({top:'5px', height:'30px'},"fast");
 	});
       </script>
-      <%= link_to "Facilities", root_path %>
+      <%= link_to "Marketplace", root_path %>
     </div>
     
  
@@ -76,7 +89,7 @@
       <%= link_to "Espionage", root_path %>
     </div>
            
-    
+
    <% if admin? %>
     <div class="tab_button" id="tab_button8">
       <script>
