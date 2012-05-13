@@ -18,6 +18,12 @@
 
 </div>
 
+<% if help_tips? %>
+<div id="help_box_spam">
+	<h1>SpamBox</h1>
+ <p class="welcome_text">The SpamBox is like an internal twitter feed for Gold and Glory. Post a message and it'll turn up here for other players to read.</p> <div class="button_row"> <button id="hide_spam">Got it! Now go away...</button> <%= button_to "Turn Off Help Tips", :controller => 'users', :action => "deactivate_help_tips", :remote => true %></div></div>
+<% end %>
+
 <div id="spam_container">
   <% if signed_in? %>
 
@@ -56,6 +62,28 @@
 
 
   <% end %>
+  
+<script>
+
+
+
+	$(".help_tips_off").click(function(){
+		
+		user.help_tips = false;
+
+	}
+	);
+
+  $("#hide_spam").click(function(){
+
+		$("#help_box_spam").animate({"left": "+=500px"}, 400, function(){
+  			$("#help_box_spam").animate({"opacity": 0}, 1); 
+  			}
+  			)
+  			}
+  			);
+  
+  </script>  
   
 </div>
 </div>

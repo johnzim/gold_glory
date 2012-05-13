@@ -30,6 +30,7 @@ class GamestateController < ApplicationController
 
 	end
 	
+
 	
 def activate_help_tips
   

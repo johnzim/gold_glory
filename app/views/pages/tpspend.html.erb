@@ -37,7 +37,7 @@
 <div id="help_box_1">
 	<h1>Help Tip</h1>
  <p class="welcome_text">Spend and re-distribute talent points till you achieve equillibrium and the 'TP spent' indicator turns green with a Tick-Mark (<img src="/images/pt_left_pointer_green_small.png">). 
-  You can come back to this page and change your athletes at any point before stats are rolled. </p> <div class="button_row"> <button id="hide_1">Got it! Now go away...</button>    <button>Turn Off Help Tips</button></div></div>
+  You can come back to this page and change your athletes at any point before stats are rolled. </p> <div class="button_row"> <button id="hide_1">Got it! Now go away...</button><%= button_to "Turn Off Help Tips", {:controller => 'users', :action => "deactivate_help_tips"}, :class => 'hide_help_tips_button', :remote => true %></div></div>
 <% end %>
 
 

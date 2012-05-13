@@ -14,6 +14,15 @@ class PagesController < ApplicationController
     end
   end
 
+def deactivate_help_tips 
+	current_user.help_tips = false
+	redirect_to root_path
+
+    respond_to do |format|
+      format.js { redirect_to root_path }
+    end
+end
+
   def marketplace
     @title = "Marketplace"
     @user = current_user unless current_user.nil?

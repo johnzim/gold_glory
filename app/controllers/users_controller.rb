@@ -59,6 +59,13 @@ class UsersController < ApplicationController
   end
   
 
+def deactivate_help_tips 
+	current_user.update_attribute(:help_tips, false)
+
+    redirect_to root_path
+   
+end
+
   def destroy
     user = User.find(params[:id])
     if user.admin? 

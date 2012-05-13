@@ -2,7 +2,7 @@
   <%= form_for @spampost, :remote => true do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
   <div id="field">
-    <%= f.text_area :content %>
+    <%= f.text_area :content, :placeholder => "Write your message..." %>
   </div>
   <div id="submit_button">
     <%= f.submit "Submit" %>
