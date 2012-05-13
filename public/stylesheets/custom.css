@@ -62,7 +62,15 @@ body{
 	position:  relative;
 	left:  80px;
 	top: 60px;
-	background-color: red;
+background: #e23c00; /* Old browsers */
+background: -moz-linear-gradient(top,  #e23c00 0%, #ff7161 6%, #ff4727 33%, #ff4727 60%, #e23c00 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e23c00), color-stop(6%,#ff7161), color-stop(33%,#ff4727), color-stop(60%,#ff4727), color-stop(100%,#e23c00)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #e23c00 0%,#ff7161 6%,#ff4727 33%,#ff4727 60%,#e23c00 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #e23c00 0%,#ff7161 6%,#ff4727 33%,#ff4727 60%,#e23c00 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #e23c00 0%,#ff7161 6%,#ff4727 33%,#ff4727 60%,#e23c00 100%); /* IE10+ */
+background: linear-gradient(top,  #e23c00 0%,#ff7161 6%,#ff4727 33%,#ff4727 60%,#e23c00 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e23c00', endColorstr='#e23c00',GradientType=0 ); /* IE6-9 */
+
 /*	background-image:url('/images/nexteventbg2.png');*/
 	float: left;
 	width:  370px;
@@ -351,6 +359,14 @@ font-size: 11pt;
 	-moz-box-shadow: 4px 4px 15px #000000;
 	-webkit-box-shadow: 4px 4px 15px #000000;
 	box-shadow: 4px 4px 15px #000000;
+background: #1b5ac6; /* Old browsers */
+background: -moz-linear-gradient(top,  #1b5ac6 0%, #6db3f2 6%, #3690f0 33%, #3690f0 60%, #1b5ac6 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1b5ac6), color-stop(6%,#6db3f2), color-stop(33%,#3690f0), color-stop(60%,#3690f0), color-stop(100%,#1b5ac6)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #1b5ac6 0%,#6db3f2 6%,#3690f0 33%,#3690f0 60%,#1b5ac6 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #1b5ac6 0%,#6db3f2 6%,#3690f0 33%,#3690f0 60%,#1b5ac6 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #1b5ac6 0%,#6db3f2 6%,#3690f0 33%,#3690f0 60%,#1b5ac6 100%); /* IE10+ */
+background: linear-gradient(top,  #1b5ac6 0%,#6db3f2 6%,#3690f0 33%,#3690f0 60%,#1b5ac6 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b5ac6', endColorstr='#1b5ac6',GradientType=0 ); /* IE6-9 */
 }
 
 #results_container{
@@ -369,6 +385,13 @@ font-size: 11pt;
 #results_container h2 {
 	
 	padding: 10px;
+}
+
+#spambox_title {
+    font-size: 14pt;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 8px;
 }
 
 #spamfeed {
@@ -390,12 +413,19 @@ font-size: 11pt;
 }
 
 #spamfeed_item {
-	color: white;
-	background: grey;
-	
+	color: black;
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #ffffff 0%, #f3f3f3 50%, #ededed 96%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f3f3f3), color-stop(96%,#ededed)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #ffffff 0%,#f3f3f3 50%,#ededed 96%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #ffffff 0%,#f3f3f3 50%,#ededed 96%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #ffffff 0%,#f3f3f3 50%,#ededed 96%); /* IE10+ */
+background: linear-gradient(top,  #ffffff 0%,#f3f3f3 50%,#ededed 96%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
 }
 
 #spamfeed_item ul li {
+    font-size: 10pt;
 	list-style-type: none;
 }
 #posted_at {
@@ -806,6 +836,7 @@ top: 105px;
 width: 300px;
 height: 260px;
 z-index: 10;
+text-align: center;
 
 background: #f9f2bb; /* Old browsers */
 background: -moz-linear-gradient(top,  #f9f2bb 0%, #f9e84d 50%, #f7e600 51%, #f2f28e 100%); /* FF3.6+ */
@@ -829,7 +860,7 @@ top: 185px;
 width: 280px;
 height: 200px;
 z-index: 10;
-
+text-align: center;
 background: #f9f2bb; /* Old browsers */
 background: -moz-linear-gradient(top,  #f9f2bb 0%, #f9e84d 50%, #f7e600 51%, #f2f28e 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f2bb), color-stop(50%,#f9e84d), color-stop(51%,#f7e600), color-stop(100%,#f2f28e)); /* Chrome,Safari4+ */
