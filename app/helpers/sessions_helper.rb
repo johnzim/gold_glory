@@ -36,6 +36,10 @@ module SessionsHelper
   def creation_mode?
     current_user.creation_mode?
   end
+  
+  def help_tips?
+  	current_user.help_tips?
+  end
 
   def admin?
     current_user.admin?

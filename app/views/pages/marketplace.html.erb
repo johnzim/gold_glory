@@ -37,7 +37,7 @@
 	 <li>Event:  <br /> <%= select(:coach, :event, [['Athletics - Field', 'Athletics - Field'], ['Athletics - Track', 'Athletics - Track'], ['Swimming', 'Swimming'], ['Shooting', 'Shooting'], ['Weightlifting', 'Weightlifting'], ['Judo', 'Judo'], ['Rowing', 'Rowing'], ['Cycling', 'Cycling'], ['Gymnastics', 'Gymnastics'], ['Boxing', 'Boxing'], ['Equestrian', 'Equestrian'], ['Diving', 'Diving'], ['Canoeing', 'Canoeing'], ['Taekwondo', 'Taekwondo'], ['Fencing', 'Fencing'], ['Sailing', 'Sailing']], {:selected => @coach.event}) %></li>
 	  <li>Level:  <br /> 
      <%= select(:coach, :level, [['1', 1], ['2', 2], ['3', 3]], {:selected => @coach.level}) %></li>
-     <li>Cost: <br /> <span id="cash_cost">5</span></li>
+     <li>Cost: <br /> $<span id="cash_cost">5</span>k</li>
 	<li><%= f.submit "Purchase" %>
 </li>
 

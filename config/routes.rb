@@ -53,6 +53,7 @@ GoldGlory::Application.routes.draw do
   match '/generate', :to => 'gamestate#generate_athletes'
   match '/activate_creation', :to => 'gamestate#activate_creation'
   match '/deactivate_creation', :to => 'gamestate#deactivate_creation'
+  match '/activate_help_tips', :to => 'gamestate#activate_help_tips'
 
 
   match '/signup',  :to => 'users#new'

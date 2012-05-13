@@ -30,6 +30,20 @@ class GamestateController < ApplicationController
 
 	end
 	
+	
+def activate_help_tips
+  
+  	@users = User.all
+  
+  	@users.each do |user|
+ 	  user.update_attribute(:help_tips, true)
+  	end
+  
+    flash[:success] = "*** Help Tips Activated Successfully"
+    redirect_to :controller => :pages, :action => "admin_dashboard"
+
+	end
+	
 	def deactivate_creation
   
   	@users = User.all
