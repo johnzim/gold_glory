@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  include GamestateHelper
 
  # before_filter :admin_user, :only => :admin_dashboard
   def home

@@ -1,6 +1,15 @@
 class CoachesController < ApplicationController
   
- 
+ def index
+    @title = "All Coaches"
+    @coaches = Coach.paginate(:page => params[:page])
+
+
+    @spampost = Spampost.new
+    @spamfeed_items = Spampost.limit(5) 
+
+  end
+
    
   def create
     @coach = current_user.coaches.build(params[:coach])

@@ -1,0 +1,34 @@
+<div class = "roster_item">
+<div id=<%= h("pic_") + h(coach.id) %> class="roster_icon">
+<% if coach.gender == "Male" %>
+  		<img id="athlete_portrait"
+		src=<%=h("/images/coaches/male/") + h(coach.iconno) + h(".png") %>>
+  		<% else %>
+  			<img id="athlete_portrait"
+		src=<%=h("/images/coaches/female/") + h(coach.iconno) + h(".png") %>>
+		<% end %>
+	</div>
+	
+	<div id=<%= h("stats_") + h(coach.id) %> class="roster_stats">
+  <ul>
+    <li>
+     <%= coach.name %>
+
+
+	  
+<br/>Gender: <%= coach.gender =%>
+       <br />
+ </li>
+     <li>
+Nationality:     
+     <%= coach.nationality %>
+	<br />
+ 	Event: <%= coach.event %>
+
+	<br />
+   Level: <%= coach.level %>
+     </li>
+
+  </ul>
+	</div>
+</div>

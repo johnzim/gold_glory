@@ -1,0 +1,37 @@
+<div id="upper_block">
+<div id="next_event_container">
+  <%= render 'shared/next_event' %>
+</div>
+
+
+<div id ="results_container">
+  <h2>Results Go Here</h2>
+</div>
+
+<div id ="lower_block">
+
+<div id ="tab_bar_container">
+  <%= render 'shared/tab_bar' %>
+</div>
+
+<div id="spam_container">
+  <% if signed_in? %>
+
+  <%= render '/shared/spamfeed' %>
+  
+  <%= render '/shared/spampost_form' %>
+  <% end %>
+
+</div>
+
+<div id = "content_container">
+ <h1>All Coaches</h1>
+
+<%= will_paginate %>
+  <%= render @coaches %>
+<%= will_paginate %>
+ 
+</div>
+
+
+
